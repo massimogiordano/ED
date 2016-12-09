@@ -1,0 +1,10 @@
+center    
+        img(id="#{uniqueID}" src="#{path}#{def}.#{ext}" style="  width: #{width_img}px;")
+        input(type="range"  min="1" max="#{tot_img}" value="#{def}" step="1" oninput="showVal(this.value)" onchange="showVal(this.value)" style="  width: #{width_bar}px;" )
+        
+      script(type='text/javascript').
+        function showVal(newValue)
+        {
+        var str = "#{path}"+newValue+".#{ext}";
+        document.getElementById("#{uniqueID}").src = str;
+        }
