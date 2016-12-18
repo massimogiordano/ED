@@ -1,0 +1,75 @@
+script(src="https://code.jquery.com/jquery-1.10.2.js") 
+//cod in latex as SCV picture
+script(type="text/javascript").
+  var equations = document.getElementsByClassName("equation svg");
+  for (var i = 0, n = equations.length; i < n; i = i + 1) {
+          equations[i].innerHTML ='<img src="http://latex.codecogs.com/svg.latex?' +equations[i].innerHTML+'" >';
+  }
+  
+  var num =1;
+  $(".equation:not(.displaymath)").each(function(index,item){
+      item.innerHTML = item.innerHTML+'<div class="numeq">('+num+')</div>';
+      
+      
+      var str = item.getAttribute("id");
+      item.setAttribute("id", "eq:" + num);
+      
+      $('eq[id ="'+str + '"]').each(function(index,it){
+      $(it).html('<a href="#eq:'+num+'" style="text-decoration: none; color : #000000;"> ('+num+') </a>');
+      });
+      num = num +1;
+  
+  });
+  
+//index
+script(type="text/javascript").
+  $('section').each(function(index,item){
+      var tag = item.getElementsByTagName("h1");
+      for (var i = 0, n = tag.length; i < n; i = i + 1) {
+           tag[i].setAttribute("class", "section_index");
+      }
+      $('h2').each(function(ind,it){
+        it.setAttribute("class", "section_index");
+      });
+  });
+     
+  var x = 0;
+  var y = 0;
+  var inde = document.getElementsByClassName("index")[0].getElementsByTagName("p")[0];
+  
+  $('section').each(function(index,item){
+    
+    var tag = item.getElementsByClassName("section_index")[0];
+    if(tag.tagName == "H1"){
+        x = x +1;
+        tag.innerHTML = x +"  "+  tag.innerHTML; 
+        y = 0;
+        
+        inde.innerHTML= inde.innerHTML+'<br><a href="#sec:'+x+':'+y+'" style="text-decoration: none; color : #000000;"><b><font size="3%">' + tag.innerHTML + "</font></b></a>";
+        
+    }
+    if(tag.tagName == "H2"){
+        y = y +1;
+        tag.innerHTML = x +"."+ y +"&nbsp "+  tag.innerHTML; 
+        
+        inde.innerHTML= inde.innerHTML+'<br><a href="#sec:'+x+':'+y+'" style="text-decoration: none; color : #000000;">&nbsp&nbsp' + tag.innerHTML + "</a>";
+    }
+    
+    item.setAttribute("id", "sec:"+x+":"+y);
+  });
+//cit and reference
+script(type="text/javascript").
+  var x = 0;
+  $('div[class="reference"]').each(function(index,item){
+    x = x +1;
+    var str = item.getAttribute("ref");
+    item.setAttribute("id", "ref:" + str);
+    item.innerHTML = '['+ x + '] '+ item.innerHTML;
+    $('cit[id ="'+str + '"]').each(function(index,item){
+     $(item).html('<a href="#ref:'+str+'" style="text-decoration: none"> ['+x+'] </a>');
+    });
+  });
+
+
+script(type="text/javascript").
+  SyntaxHighlighter.all()

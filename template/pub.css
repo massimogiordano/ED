@@ -196,10 +196,10 @@ h6.counter-reset {
   counter-reset: subsubsubsubsection;
 }
  h1:not(.counter-skip):before {
-  content: ""  counter(section, decimal) "";
+  //content: ""  counter(section, decimal) "";
 }
  h2:not(.counter-skip):before {
-  content: ""  counter(section, decimal) '.' counter(subsection, decimal) "";
+  //content: ""  counter(section, decimal) '.' counter(subsection, decimal) "";
 }
  h3:not(.counter-skip):before {
   content: ""  counter(section, decimal) '.' counter(subsection, decimal) '.' counter(subsubsection, decimal) "";
@@ -372,7 +372,7 @@ h1 {
   text-transform: uppercase;
 }
 h1:not(.counter-skip):before {
-  content: "" counter(section) ".";
+  //content: "" counter(section) ".";
 }
 h1 + h2,
 h1 + * > h2:first-child {
@@ -454,7 +454,7 @@ ref a {
   counter-reset: section;
 }
 .appendix h1:not(.counter-skip):before {
-  content: "" counter(section, upper-alpha) "";
+ // content: "" counter(section, upper-alpha) "";
 }
 .appendix h2:not(.counter-skip):before {
   content: "" counter(section, upper-alpha) '.' counter(subsection, decimal) "";
@@ -471,7 +471,14 @@ ref a {
   counter-increment: equation;
 }
 .equation:not(.displaymath):after {
-  content: "(" counter(equation) ")";
+  //content: "(" counter(equation) ")";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 50%;
+  line-height: 0;
+}
+.numeq{
   position: absolute;
   top: 50%;
   right: 0;
@@ -510,14 +517,15 @@ ref a {
 }
 @media screen {
   .authors {
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    column-count: 1;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
   }
   .copyright {
     display: none;
   }
 }
-eq::before {
-    content: "<img src=\"http://latex.codecogs.com/svg.latex?";
+
+.abstract{
+    text-align: center;
 }
