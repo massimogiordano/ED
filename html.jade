@@ -126,7 +126,7 @@ html
       section
         h2 Fermi energy and Sub-bands with respect to Gate Voltage
         p
-         |In order to obtain $n_s$ we solved numerically the two equations system of eq 1-2, as estensely described in chapeter ##2DEG. 
+         |In order to obtain $n_s$ we solved numerically the two equations system of eq 1-2, as extensively described in chapter ##2DEG. 
          //codice matlab
          |This is needed to find $E_f$, $E_0$ and $E_1$ using the eq. (citE=n^2/3). Below the plot show the relation between $E_f$ and the two sub-bands with respect to the gate voltage and the temperature. 
          
@@ -141,7 +141,7 @@ html
         include img_range
         
         p 
-         |As we can see in the plot $E_f$ intersect only $E_0$ and this point is important because allow to distingusce two regions. To further highlith this behavior we plot the difference between $E_f$ and the two energy sub-bands $E_0$ and $E_1$. 
+         |As we can see in the plot $E_f$ intersect only $E_0$ and this point is important because allow to distinguish two regions. To further highlight this behavior we plot the difference between $E_f$ and the two energy sub-bands $E_0$ and $E_1$. 
          //plot
          |$E_1$ is always larger than $E_f$ and $E_0$ while $E_0$ in smaller then $E_f$ in region 1 while in the second region $E_0$ is always greater then $E_f$. The width of the first region increase with the temperature. (WHY?!?)  
          |A different model is developed for each regions, then they will be unify to obtain a continuous solution. 
@@ -187,14 +187,15 @@ html
               |n_s = \frac{\epsilon}{qd}\left(V_{\text{go}} - E_f \right)
              |Since $E_f$ is much smaller than $V_{\text{go}}$ we can expand the Taylor Series to the first order in $E_f^I/V_{\text{go}}$ . Despite the fact that for voltages very close to cutoff $E_f^I$ is not significantly smaller than $V_{\text{go}}$ the ultimate results provided by this work are in agreement with the numerical solution. This point is extensively discussed in chapter #7cicciarculo7#.
              | Hence the obtained $E_f$ dependence on the gate bias is:
-             //.equation.svg#EfvsVg1
-             //scrivere Ef1
-             |Analogously, combining eq (equazioni) 
-             //eq#EfvsVg1
-             //eq#efin1
+             .equation.svg#EfvsVg1
+              |E_f^I = V_{\text{go}}\frac{V_{\text{th}} \text{ln}\left( \beta V_{\text{go}} \right) + \gamma_0 \left( \frac{ C_g V_\text{go}}{q}\right)^\frac{2}{3}}{ V_{\text{go}} + V_{\text{th}} + \frac{2\gamma_0}{3} \left( \frac{ C_g V_\text{go}}{q}\right) ^\frac{2}{3}}
+             |Combining eq
+             eq#EfvsVg1
+             |and
+             eq#efin1
              |the behavior of $n_s$ as $V_g$ varies is expressed it follows:
-             //.equation.svg#nsVSvg1
-             //scriverens1
+             .equation.svg#nsVSvg1
+              |n_s^I = \frac{C_g V_{\text{go}}}{q} \frac{  V_{\text{go}} +  V_{\text{th}}\left[ 1 - \ln\left(  \beta V_{\text{go}} \right ) \right ]  - \frac{\gamma_0}{3}\left( \frac{ C_g V_\text{go}}{q}\right) ^\frac{2}{3}}{ V_{\text{go}} +  V_{\text{th}} + \frac{2\gamma_0}{3} \left( \frac{ C_g V_\text{go}}{q}\right) ^\frac{2}{3}}
              |Equations (numeri) constitue the analyt
              
         section
