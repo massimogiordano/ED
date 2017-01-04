@@ -175,7 +175,20 @@ end
         <h2>Fermi energy and Sub-bands with respect to Gate Voltage</h2>
         <p>In order to obtain $n_s$ we solved numerically the two equations system of eq 1-2, as estensely described in chapeter ##2DEG. 
           <!--codice matlab-->This is needed to find $E_f$, $E_0$ and $E_1$ using the eq. (citE=n^2/3). Below the plot show the relation between $E_f$ and the two sub-bands with respect to the gate voltage and the temperature. 
-          <!--plot with bar-->As we can see in the plot $E_f$ intersect only $E_0$ and this point is important because allow to distingusce two regions. To further highlith this behavior we plot the difference between $E_f$ and the two energy sub-bands $E_0$ and $E_1$. 
+        </p>
+        <center>   <img id="fig1" src="img/fig1/Energies_vs_Volts15.svg" style="  width: 500px;">
+          <input type="range" min="1" max="25" value="15" step="1" oninput="showVal(this.value)" onchange="showVal(this.value)" style="  width: 300px;">
+        </center>
+        <script type="text/javascript">
+          function showVal(newValue)
+          {
+          var str = "img/fig1/Energies_vs_Volts"+newValue+".svg";
+          document.getElementById("fig1").src = str;
+          }
+        </script>
+        <p>
+           
+          As we can see in the plot $E_f$ intersect only $E_0$ and this point is important because allow to distingusce two regions. To further highlith this behavior we plot the difference between $E_f$ and the two energy sub-bands $E_0$ and $E_1$. 
           <!--plot-->$E_1$ is always larger than $E_f$ and $E_0$ while $E_0$ in smaller then $E_f$ in region 1 while in the second region $E_0$ is always greater then $E_f$. The width of the first region increase with the temperature. (WHY?!?)  
           A different model is developed for each regions, then they will be unify to obtain a continuous solution. 
           <!--|In the quantum well a high number of bounded states are available, however only the first two are taken into account because of the probability of occupation. We estimated those values assuming a triangular well with maximum potential equal to the built in obtained through the work functions.-->

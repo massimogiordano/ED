@@ -129,7 +129,18 @@ html
          |In order to obtain $n_s$ we solved numerically the two equations system of eq 1-2, as estensely described in chapeter ##2DEG. 
          //codice matlab
          |This is needed to find $E_f$, $E_0$ and $E_1$ using the eq. (citE=n^2/3). Below the plot show the relation between $E_f$ and the two sub-bands with respect to the gate voltage and the temperature. 
-         //plot with bar
+         
+        - var tot_img = 25;
+        - var def = 15;
+        - var path = "img/fig1/Energies_vs_Volts";
+        - var ext  = "svg";
+        - var uniqueID  ="fig1";
+        - var width_bar = "300";
+        - var width_img = "500";
+        
+        include img_range
+        
+        p 
          |As we can see in the plot $E_f$ intersect only $E_0$ and this point is important because allow to distingusce two regions. To further highlith this behavior we plot the difference between $E_f$ and the two energy sub-bands $E_0$ and $E_1$. 
          //plot
          |$E_1$ is always larger than $E_f$ and $E_0$ while $E_0$ in smaller then $E_f$ in region 1 while in the second region $E_0$ is always greater then $E_f$. The width of the first region increase with the temperature. (WHY?!?)  
