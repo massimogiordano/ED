@@ -144,7 +144,7 @@ html
          |As we can see in the plot $E_f$ intersect only $E_0$ and this point is important because allow to distinguish two regions. To further highlight this behavior we plot the difference between $E_f$ and the two energy sub-bands $E_0$ and $E_1$. 
          //plot
          |$E_1$ is always larger than $E_f$ and $E_0$ while $E_0$ in smaller then $E_f$ in region 1 while in the second region $E_0$ is always greater then $E_f$. The width of the first region increase with the temperature. (WHY?!?)  
-         |A different model is developed for each regions, then they will be unify to obtain a continuous solution. 
+         |A different model is developed for each regions, at the end they will be unify to obtain a continuous solution. 
           
          
          
@@ -209,23 +209,23 @@ html
             |and
             eq#ns2reg
             |applying the same approximations exploited in region I, the Fermi level and the sheet carrier charge density in region II are analytically described.
-            //.equation.svg#Ef in regione 2 al variare di vg
-            //.equation.svg#Ns in regione 2 al variare di vg
+            .equation.svg#EfII 
+             |E_f^I = V_{\text{go}}\frac{\beta V_{\text{th}} V_{\text{go}}+ \gamma_0 \left( \frac{ C_g V_\text{go}}{q}\right)^\frac{2}{3}}{ \left( 1 +\beta V_{\text{th}} \right )V_{\text{go}}  + \frac{2\gamma_0}{3} \left( \frac{ C_g V_\text{go}}{q}\right) ^\frac{2}{3}} 
+            .equation.svg#NsII 
+             |n_s^I = \frac{C_g V_{\text{go}}}{q} \frac{  V_{\text{go}}  - \frac{\gamma_0}{3}\left( \frac{ C_g V_\text{go}}{q}\right) ^\frac{2}{3}}{ \left(1 + \beta V_{\text{th}}   \right )V_{\text{go}}+       \frac{2\gamma_0}{3} \left( \frac{ C_g V_\text{go}}{q}\right) ^\frac{2}{3}}
             | Below, the graphs illustrate the computed dependence of $E_f$ and $n_s$ on $V_g$
             //mettere grafici... SE si vogliono mostrare (nell'articolo non sono mostrati)
             
         section
             h2 Unified model and explicit formula for 2DEG charge density
             p
-            | A unified analytical expression for the sheet carrier charge density versus the gate voltage is sought. To achieve this goal a physically reasonable merging of the distinct behaviors in region I and II is needed. The $n_s$ expressions in the two zones differ in two terms dependending on the thermal voltage $V_{th}$ (one term in the numerator and the other one in the denominator).
+            | A unified analytical expression for the sheet carrier charge density versus the gate voltage is sought. To achieve this goal a physically reasonable merging of the distinct behaviors in region I and II is needed. The $n_s$ expressions in the two zones differ in two terms depending on the thermal voltage $V_{th}$ (one term in the numerator and the other one in the denominator).
       section
           h1 Conclusion
         
         
       section
         h1 References
-        .reference(ref="prova")
-          | prova
         .reference(ref="firstmodel")
           | AIGaAs-GaAs Two-Dimensional Electron Gas FET. IEEE TRANSACTIONS ON ELECTRON DEVICES, VOL. ED-29,NO.6,JUNE 1982
         .reference(ref="secondmodel")  
