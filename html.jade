@@ -219,7 +219,34 @@ html
         section
             h2 Unified model and explicit formula for 2DEG charge density
             p
-            | A unified analytical expression for the sheet carrier charge density versus the gate voltage is sought. To achieve this goal a physically reasonable merging of the distinct behaviors in region I and II is needed. The $n_s$ expressions in the two zones differ in two terms depending on the thermal voltage $V_{th}$ (one term in the numerator and the other one in the denominator).
+
+            | A unified analytical expression for the sheet carrier charge density versus the gate voltage is sought. To achieve this goal a physically reasonable merging of the distinct behaviors in region I and II is needed. The $n_s$ expressions in the two zones differ in two terms both dependending on the thermal voltage $V_{th}$ (one term in the numerator and the other one in the denominator). Therefore, it is to be expected that both the regional models provide an acceptable description for the whole gate voltage range expect very close to the cutoff value. The following graphs aim at illustrating and analysing the accuracy of each of the regional models and a first unified model for $n_s$ and $E_f$, which does not considering the thermal voltage, when applied to the full voltage range.
+            //mettere plot
+            |Since the analytical description provided  by this first unified model is in fairly agreement with the regional ones it may seem satisfying, nonetheless the accuracy can be improved.
+            |In fact,the two regional models can be combined using proper interpolation expressions that  are shown below.
+            .equation.svg#InterpolExpress
+             |V_{gon}= \frac{V_{go} \text{e}}{\beta \sqrt{V_{go}^2 + (\text{e}/ \beta)^2} \text{,} 
+             |V_{god}= \frac{V_{go} }{\beta \sqrt{V_{go}^2 + (\text{e}/ \beta)^2}.
+             
+             |The final computed unified $n_s = n_s(V_{go})$ equals:
+             //.equation.svg#NSunified
+             //formula ns unificato
+            
+            | This proposed model takes into account the temperature dependence and it adjusts and balances the behavior of $n_s^I$ and $n_s^{II}$, in fact if they were used to describe the sheet carrier charge density throughout the whole voltage range they would respectively overestimante and underestimate this physical quantity. This consideration is justified by an inspection of the following graph which represents the difference from the numerical solution $n_s^N$ of $n_s^I$ and $n_s^{II}$.
+            //plot NSi - NSnumerical
+            section
+            h2 Results discussion
+            p
+             | The developed model is compared with the two regional models at room temperature. It is to be noticed that all models are in good agreement with the numerical solution. 
+             //plot
+             |The unified model has the highest precision as the below graph illustrates. It shows the absolute error with respect the numerical data set. The accuracy diminishes as the voltage reaches the cutoff value, in fact this is a critical region for every developed model even though the unified one remains the best performing. The steep rise of the error is due to the validity loss of the linear approximation for the Taylor series expansion with respect to $E_f^I/V_{go}$ within a close range of the cutoff value.
+             | It can be also highlighted that $n_s^I$ provides an acceptable analytical model for Region II having a relative error always equal or smaller than $2.5 \%$ whereas this can not be stated for $n_s^{II}$ in region 1.
+             section
+             h2 Temperature dependence
+             p
+             | It is physically meaningful to investigate the precision of the present model at elevated temperatures since GaN-based HEMT are particularly interesting for high-power applications. The below plot represents the sheet carrier charge density versus the gate voltage computed at different temperatures: 200K, 300K, 400K and 500K.   The temperature rise leads to an increase of the error near the cutoff region. Despite this, the unified model does not remarkably deviates from numerical solution of the analytical expression hence producing accpetable results.
+            
+
       section
           h1 Conclusion
         
