@@ -233,14 +233,14 @@ html
             
             | This proposed model takes into account the temperature dependence and it adjusts and balances the behavior of $n_s^I$ and $n_s^{II}$, in fact if they were used to describe the sheet carrier charge density throughout the whole voltage range they would respectively overestimante and underestimate this physical quantity. This consideration is justified by an inspection of the following graph which represents the difference from the numerical solution $n_s^N$ of $n_s^I$ and $n_s^{II}$.
             //plot NSi - NSnumerical
-            section
+        section
             h2 Results discussion
             p
              | The developed model is compared with the two regional models at room temperature. It is to be noticed that all models are in good agreement with the numerical solution. 
              //plot
              |The unified model has the highest precision as the below graph illustrates. It shows the absolute error with respect the numerical data set. The accuracy diminishes as the voltage reaches the cutoff value, in fact this is a critical region for every developed model even though the unified one remains the best performing. The steep rise of the error is due to the validity loss of the linear approximation for the Taylor series expansion with respect to $E_f^I/V_{go}$ within a close range of the cutoff value.
              | It can be also highlighted that $n_s^I$ provides an acceptable analytical model for Region II having a relative error always equal or smaller than $2.5 \%$ whereas this can not be stated for $n_s^{II}$ in region 1.
-             section
+        section
              h2 Temperature dependence
              p
              | It is physically meaningful to investigate the precision of the present model at elevated temperatures since GaN-based HEMT are particularly interesting for high-power applications. The below plot represents the sheet carrier charge density versus the gate voltage computed at different temperatures: 200K, 300K, 400K and 500K.   The temperature rise leads to an increase of the error near the cutoff region. Despite this, the unified model does not remarkably deviates from numerical solution of the analytical expression hence producing accpetable results.
