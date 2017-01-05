@@ -22,10 +22,10 @@ plot(Volts, Efermi - E0,'LineWidth',2)
     
     %%IMAGE SET UP
     title(['Sub-bands E_i relative to Fermi Energy ' ' at ' num2str(T) 'K'],'FontSize',15)
-    xlabel('Gate Voltage [V]','FontSize',15) 
-    ylabel(' \Delta E [V]','FontSize',15)
+    xlabel('Gate Voltage [V]','FontSize',14) 
+    ylabel(' \Delta E [V]','FontSize',14)
     h_legend=legend('E_1','E_0');
-    set(h_legend,'Location','southeast','FontSize',14);
+    set(h_legend,'Location','southeast','FontSize',11);
     %axis([-3 3 -0.15 1])
     
     saveas(f,['Diff_Ef_vs_E0_E1_vs_Volts' num2str(T) '.svg'],'svg');

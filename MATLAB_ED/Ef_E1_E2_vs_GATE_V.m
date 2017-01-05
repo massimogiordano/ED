@@ -2,7 +2,7 @@ function [Efermi, E0, E1, Volts ] = Ef_E1_E2_vs_GATE_V(T, Vmin, Vmax,  f)
 
 global Voff l0 l1 Vth P2 P1 DeltaV Vgo Kb ep q d D 
 
-Vth = T*Kb; %bolzamn costant * T
+Vth = T*Kb; %bolzamn costant * Temperature
 P2 = D*Vth;
 P1 = ep/(q*d);
 

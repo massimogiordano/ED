@@ -8,7 +8,7 @@ Vmax = 3;   %gate voltage
 global Voff l0 l1 ep D q mo h m Kb hbar d DeltaV T Reg1_2
 
 T = 300; %temperature
-
+for T=100:20:500
 f = figure()
     
 Voff= -3;
@@ -34,14 +34,14 @@ DeltaV= 100;     %resolution - number of points in the plot
 [Reg1_2] =  Efermi_E0_E1(Volts, Efermi, E0, E1, f);
             Region1_2_volts  = Volts(Reg1_2);
             Region1_2_Efermi = Efermi(Reg1_2);
-        
-%voltage at which BIAS is not applyied        
-V0 = find(Volts >= 0);
-V0 = V0(1); %index for Vgate = 0
-
-%bound states into trig_well AIRY functions        
-[El0, El1, Emax, Airy_energies] = airy_fuctions(Efermi, E0, E1, V0, f);
-        
-%approximations
-
-approximations(Volts, Efermi, T,f);
+end        
+% %voltage at which BIAS is not applyied        
+% V0 = find(Volts >= 0);
+% V0 = V0(1); %index for Vgate = 0
+% 
+% %bound states into trig_well AIRY functions        
+% [El0, El1, Emax, Airy_energies] = airy_fuctions(Efermi, E0, E1, V0, f);
+%         
+% %approximations
+% 
+% approximations(Volts, Efermi, T,f);
