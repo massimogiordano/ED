@@ -24,7 +24,7 @@
 		// Contributed by Gheorghe Milas and Ahmad Sherif
 	
 		var keywords =  'and assert break class continue def del elif else ' +
-						'except exec finally for from global if import in is ' +
+						'except exec finally for from global if import end is ' +
 						'lambda not or pass print raise return try yield while';
 
 		var funcs = '__import__ abs all any apply basestring bin bool buffer callable ' +

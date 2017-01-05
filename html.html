@@ -173,10 +173,11 @@ end
       </section>
       <section>
         <h2>Fermi energy and Sub-bands with respect to Gate Voltage</h2>
-        <p>In order to obtain $n_s$ we solved numerically the two equations system of eq cit 1-2, as extensively described in chapter ##2DEG. Since $n_s$ is strictly dependent to the relative positions between the sub-bands and the Fermi Energy it is important to calculate also $E_0$ and $E_1$ using the following expression.
-          <div id="Ens23" class="equation svg">E_0 = \gamma_0 n_s^\frac{2}{3} \ , \ E_1 = \gamma_1 n_s^\frac{2}{3}</div>
-          <!--codice matlab-->Below the plot show the relation between $E_f$ and the two sub-bands with respect to the gate voltage and the temperature. 
+        <p>
+          In order to obtain $n_s$ we solved numerically the two equations system of eq cit 1-2, as extensively described in chapter ##2DEG. Since $n_s$ is strictly dependent to the relative positions between the sub-bands and the Fermi Energy it is important to calculate also $E_0$ and $E_1$ using the equations cit?? ns^2/3, as explained in the previous chapter. 
+          The following MATLAB script has been used.
         </p>
+        <p>Below the plot show the relation between $E_f$ and the two sub-bands with respect to the gate voltage and the temperature. </p>
         <center>   <img id="fig1" src="img/fig1/Energies_vs_Volts11.svg" style="  width: 500px;">
           <input type="range" min="1" max="21" value="11" step="1" oninput="showValfig1(this.value)" onchange="showVal(this.value)" style="  width: 300px;">
         </center>
