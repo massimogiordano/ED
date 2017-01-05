@@ -103,26 +103,31 @@ html
        section
         h2 Triangular well
         p
-        |  The triangular quantum well is the most suitable model to describe the 2DEG according to semiclassical approximation. To analyze let us consider a 1-dimensional problem with an uniform and constant electrical field along x-direction $\Epsilon \vec = \Epsilon \hat{x}$ . The electrostatic potential to be added in the time-indipendent single-particle Schroedinger equation in order to implement the interaction of an electron with this electric field is $\phi (x) = q $\Epsilon$ x. It follows that the Schroedinger equation to be solved is:
+        |  The triangular quantum well is the most suitable model to describe the 2DEG according to semiclassical approximation. To analyze let us consider a 1-dimensional problem with an uniform and constant electrical field along x-direction $\vec \varepsilon  = \varepsilon \hat{x}$ . The electrostatic potential to be added in the time-indipendent single-particle Schroedinger equation in order to implement the interaction of an electron with this electric field is $\phi (x) = q \varepsilon x $. It follows that the Schroedinger equation to be solved is:
         //.equation.svg#eqSCHROD
         //equazione
-        |Defining the 'characteristic' length and energy $x_0 = \left( \hbar^2 / (2 m^* q \Epsilon\right)^{1/3}$ and $E_0 =\left( (q \Epsilon \hbar)^2 / (2 m^*\right)^{1/3} $ and a new adimensional variable $s = x/x_0 - E/E_0$ eq
+        |Defining the 'characteristic' length and energy 
+        .equation.svg
+         |x_0 = \left( \frac{\hbar^2}{2 m^* q \varepsilon }\right)^{1/3} \text{and} \ \ \ E_0 =\left(   \frac{ (q \varepsilon \hbar)^2 }{2 m^*} \right)^{1/3} 
+        |and a new adimensional variable $s = x/x_0 - E/E_0$ eq
         //citare .equation.svg#eqSCHROD
         |can be cast in the below expression
         //.equation.svg#eqSCHROD-AIRY
         //equazione
-        | This differential equation has known solutions, i.e. the Airy functions. To satisfy physical requirements only one Airy function is acceptable, namely $Ai(x)= \frac{1}{\pi} \int_0^{+\inf} \text{cos}\left( xt + \frac{t^3}{3} \,dt \right)$
+        | This differential equation has known solutions, i.e. the Airy functions. To satisfy physical requirements only one Airy function is acceptable, namely 
+        .equation.svg
+         |A_i(x)= \frac{1}{\pi} \int_0^{+\infty} \text{cos}\left( xt + \frac{t^3}{3}  \right)\,dt
         //.equation.svg#z_zero e E_zero
         //eqni.
         | Eigenvalues are calculated by applying the boundary condition according to which the wavefunction is null at $x=0$. Stationary states energies are determined by the zeros of the Airy functions and are directly proportional to the characteristic energy $E_0$ thus depend on the effective mass of the electron and the electric field. Below, the expression for the general eigenvalue $E_j$ is given.
-        //.equation.svg#TriangEigenV
-        | E_j = c_j E_0 = c_j \left( (q \Epsilon \hbar)^2 / (2 m^*\right)^{1/3}
-        where $c_j$ is the j^{th} zero of the Airy function.
-        |For the purpose of this report it should be highlighted that in case of a 2DEG at the heterointerface of a wide bandgap semiconductor and a narrow bandgap one the buil-it electric field causes the quantum confinement. In details, it is strictly related to the electron surface density. Such concentration is specifically the sheet carrier charge density characterizing the 2DEG in the triangular well. Using a capacitor-like model, the built-in electric field is found to be linearly proportional to $n_s$. Hence it is valid to rewrite:
-        //.equation.svg#Subbands-NS23
-        | E_j = \gamma_j (n_s)^{2/3}
+        .equation.svg#TriangEigenV
+         | E_j = c_j E_0 = c_j \left( \frac{(q \varepsilon \hbar)^2 }{2 m^*}\right)^{1/3}
+        where $c_j$ is the $j^{th}$ zero of the Airy function.
+        |For the purpose of this report it should be highlighted that in case of a 2DEG at the heterointerface of a wide bandgap semiconductor and a narrow bandgap one the built-it electric field causes the quantum confinement. In details, it is strictly related to the electron surface density. Such concentration is specifically the sheet carrier charge density characterizing the 2DEG in the triangular well. Using a capacitor-like model, the built-in electric field is found to be linearly proportional to $n_s$. Hence it is valid to rewrite:
+        .equation.svg#Subbands-NS23
+         | E_j = \gamma_j (n_s)^{2/3}
         
-        | The (\gamma_j)_j set is experimentally determined.
+        | All $\gamma_j$ are experimentally determined.
         
        section
         h2 HEMT transistor 
@@ -154,7 +159,9 @@ html
       section
         h2 Fermi energy and Sub-bands with respect to Gate Voltage
         p
-         |In order to obtain $n_s$ we solved numerically the two equations system of eq cit 1-2, as extensively described in chapter ##2DEG. Since $n_s$ is strictly dependent to the relative positions between the sub-bands and the Fermi Energy it is important to calculate also $E_0$ and $E_1$ using the equations cit?? ns^2/3, as explained in the previous chapter. 
+         |In order to obtain $n_s$ we solved numerically the two equations system of eq cit 1-2, as extensively described in chapter ##2DEG. Since $n_s$ is strictly dependent to the relative positions between the sub-bands and the Fermi Energy it is important to calculate also $E_0$ and $E_1$ using the equations 
+         eq#Subbands-NS23
+         |, as explained in the previous chapter. 
          |The following MATLAB script has been used.
         
         p
@@ -225,7 +232,7 @@ html
              eq#efin1
              |with the following expression
              .equation.svg#nsvgef
-              |n_s = \frac{\epsilon}{qd}\left(V_{\text{go}} - E_f \right)
+              |n_s = \frac{\varepsilon}{qd}\left(V_{\text{go}} - E_f \right)
              |Since $E_f$ is much smaller than $V_{\text{go}}$ we can expand the Taylor Series to the first order in $E_f^I/V_{\text{go}}$ . Despite the fact that for voltages very close to cutoff $E_f^I$ is not significantly smaller than $V_{\text{go}}$ the ultimate results provided by this work are in agreement with the numerical solution. This point is extensively discussed in chapter #7cicciarculo7#.
              | Hence the obtained $E_f$ dependence on the gate bias is:
              .equation.svg#EfvsVg1

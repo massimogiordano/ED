@@ -135,9 +135,17 @@ end
       </n>
       <section>
         <h2>Heterostructure </h2>
-        <p>words </p>
-      </section>
-      <section>
+        <p>
+          Optoelectronics, RF electronics and high-power and high-frequency electronics demand semiconductor alloys. These applications need materials pcharacterstics to be thoroughly tailored and such requirement is fulfilled through the engineering of optical, transport and electrical properties. 
+          The most common alloys are based on different semiconductive compounds (e.g. GaN, GaAs and InP) and they can be ternary or quaternary such as Al_xGa_{1-x}As and In_xGa_{1-x}As_yP_{1-y}.
+          An heterostructure is a physical system made of materials with different bandgap but with resembling structural properties i.e. crystal lattice and lattice parameter.
+          Heteroepitaxy is the method underlying the modern growth technologies to build these systems. The most exploited techniques are MOCVD and MBE and they may harness buffer layers (i.e. alloys with gradually changing composition) to smooth the transition from one material to another to reduce strain and avoid defects.
+          III-nitrides have gained remarkable importance since they overcame the limitations of  GaAs based electronic devices for high-temperature applications and enabled to design and to fabricate optoelectronic devices in the blue and violet spectrum range. Moreover, devices working at short wavelength are required in a broad technology range, e.g. laser printers, under water communications and high density information storage. The III-nitrides bandgaps are large and direct. In details, they vary from  0.7eV (InN), 3.4 eV (GaN) and 6.2 eV (AlN)  for wurtzite semiconductors. 
+          Because of the wide energy gap and significant bond strength they can be exploited to produce short wavelength LED and high-temperature transistors. [tesi]
+          In particular, AlGaN/GaN based High Electron Mobility Transistors (HEMT) play a crucial role in next generation 3G/4G mobile phone stations, radar, mixers and oscillators. [lenka, chractersitics study]
+          GaN-based materials provide high frequency operation (tens of GHz), high saturation velocity ($\sim 10^7 cm/s$), large breakdown electric field ($3 MV/cm$) and high power density of an AlGaN/GaN HEMT over 11W/mm. Most importantly, polarization fields allow a larger two dimensional electron gas to be confined than in AlGaAs/GaAs HEMT. For all these reason GaN-based HEMT have a key role in developing advanced electronic devices.  
+          <section></section>
+        </p>
         <h2>Two dimensional electron gas (2DEG)</h2>
         <p>
            
@@ -146,15 +154,19 @@ end
       </section>
       <section>
         <h2>Triangular well</h2>
-        <p></p> The triangular quantum well is the most suitable model to describe the 2DEG according to semiclassical approximation. To analyze let us consider a 1-dimensional problem with an uniform and constant electrical field along x-direction $\Epsilon \vec = \Epsilon \hat{x}$ . The electrostatic potential to be added in the time-indipendent single-particle Schroedinger equation in order to implement the interaction of an electron with this electric field is $\phi (x) = q $\Epsilon$ x. It follows that the Schroedinger equation to be solved is:
+        <p></p> The triangular quantum well is the most suitable model to describe the 2DEG according to semiclassical approximation. To analyze let us consider a 1-dimensional problem with an uniform and constant electrical field along x-direction $\vec \varepsilon  = \varepsilon \hat{x}$ . The electrostatic potential to be added in the time-indipendent single-particle Schroedinger equation in order to implement the interaction of an electron with this electric field is $\phi (x) = q \varepsilon x $. It follows that the Schroedinger equation to be solved is:
         <!--.equation.svg#eqSCHROD-->
-        <!--equazione-->Defining the 'characteristic' length and energy $x_0 = \left( \hbar^2 / (2 m^* q \Epsilon\right)^{1/3}$ and $E_0 =\left( (q \Epsilon \hbar)^2 / (2 m^*\right)^{1/3} $ and a new adimensional variable $s = x/x_0 - E/E_0$ eq
+        <!--equazione-->Defining the 'characteristic' length and energy 
+        <div class="equation svg">x_0 = \left( \frac{\hbar^2}{2 m^* q \varepsilon }\right)^{1/3} \text{and} \ \ \ E_0 =\left(   \frac{ (q \varepsilon \hbar)^2 }{2 m^*} \right)^{1/3} </div>and a new adimensional variable $s = x/x_0 - E/E_0$ eq
         <!--citare .equation.svg#eqSCHROD-->can be cast in the below expression
         <!--.equation.svg#eqSCHROD-AIRY-->
-        <!--equazione-->This differential equation has known solutions, i.e. the Airy functions. To satisfy physical requirements only one Airy function is acceptable, namely $Ai(x)= \frac{1}{\pi} \int_0^{+\inf} \text{cos}\left( xt + \frac{t^3}{3} \,dt \right)$
+        <!--equazione-->This differential equation has known solutions, i.e. the Airy functions. To satisfy physical requirements only one Airy function is acceptable, namely 
+        <div class="equation svg">A_i(x)= \frac{1}{\pi} \int_0^{+\infty} \text{cos}\left( xt + \frac{t^3}{3}  \right)\,dt</div>
         <!--.equation.svg#z_zero e E_zero-->
-        <!--eqni.-->Eigenvalues are calculated by applying the boundary condition according to which that the wavefunction is null at $x=0$. Stationary states energies are determined by the zeros of the Airy functions and are directly proportional to the characteristic energy $E_0$ thus depend on the effective mass of the electron and the electric field. Below the expression for the general eigenvalue $E_j$ is given.
-        <!--.equation.svg#TriangEigenV-->E_j = c_j E_0 = c_j \left( (q \Epsilon \hbar)^2 / (2 m^*\right)^{1/3}
+        <!--eqni.-->Eigenvalues are calculated by applying the boundary condition according to which the wavefunction is null at $x=0$. Stationary states energies are determined by the zeros of the Airy functions and are directly proportional to the characteristic energy $E_0$ thus depend on the effective mass of the electron and the electric field. Below, the expression for the general eigenvalue $E_j$ is given.
+        <div id="TriangEigenV" class="equation svg">E_j = c_j E_0 = c_j \left( \frac{(q \varepsilon \hbar)^2 }{2 m^*}\right)^{1/3}</div>
+        <where>$c_j$ is the $j^{th}$ zero of the Airy function.</where>For the purpose of this report it should be highlighted that in case of a 2DEG at the heterointerface of a wide bandgap semiconductor and a narrow bandgap one the built-it electric field causes the quantum confinement. In details, it is strictly related to the electron surface density. Such concentration is specifically the sheet carrier charge density characterizing the 2DEG in the triangular well. Using a capacitor-like model, the built-in electric field is found to be linearly proportional to $n_s$. Hence it is valid to rewrite:
+        <div id="Subbands-NS23" class="equation svg">E_j = \gamma_j (n_s)^{2/3}</div>All $\gamma_j$ are experimentally determined.
       </section>
       <section>
         <h2>HEMT transistor </h2>
@@ -182,8 +194,8 @@ end
       </section>
       <section>
         <h2>Fermi energy and Sub-bands with respect to Gate Voltage</h2>
-        <p>
-          In order to obtain $n_s$ we solved numerically the two equations system of eq cit 1-2, as extensively described in chapter ##2DEG. Since $n_s$ is strictly dependent to the relative positions between the sub-bands and the Fermi Energy it is important to calculate also $E_0$ and $E_1$ using the equations cit?? ns^2/3, as explained in the previous chapter. 
+        <p>In order to obtain $n_s$ we solved numerically the two equations system of eq cit 1-2, as extensively described in chapter ##2DEG. Since $n_s$ is strictly dependent to the relative positions between the sub-bands and the Fermi Energy it is important to calculate also $E_0$ and $E_1$ using the equations 
+          <eq id="Subbands-NS23"></eq>, as explained in the previous chapter. 
           The following MATLAB script has been used.
         </p>
         <p>Below the plot show the relation between $E_f$ and the two sub-bands with respect to the gate voltage and the temperature. </p>
@@ -240,7 +252,7 @@ end
             In order to find out how the gate bias determinate explicitly $E_f$ and  $n_s$ we have to delete the interdependence of $E_f$ and $n_s$ in eq
             <eq id="efin1"></eq>. To do so we replace $n_s$ in eq 
             <eq id="efin1"></eq>with the following expression
-            <div id="nsvgef" class="equation svg">n_s = \frac{\epsilon}{qd}\left(V_{\text{go}} - E_f \right)</div>Since $E_f$ is much smaller than $V_{\text{go}}$ we can expand the Taylor Series to the first order in $E_f^I/V_{\text{go}}$ . Despite the fact that for voltages very close to cutoff $E_f^I$ is not significantly smaller than $V_{\text{go}}$ the ultimate results provided by this work are in agreement with the numerical solution. This point is extensively discussed in chapter #7cicciarculo7#.
+            <div id="nsvgef" class="equation svg">n_s = \frac{\varepsilon}{qd}\left(V_{\text{go}} - E_f \right)</div>Since $E_f$ is much smaller than $V_{\text{go}}$ we can expand the Taylor Series to the first order in $E_f^I/V_{\text{go}}$ . Despite the fact that for voltages very close to cutoff $E_f^I$ is not significantly smaller than $V_{\text{go}}$ the ultimate results provided by this work are in agreement with the numerical solution. This point is extensively discussed in chapter #7cicciarculo7#.
             Hence the obtained $E_f$ dependence on the gate bias is:
             <div id="EfvsVg1" class="equation svg">E_f^I = V_{\text{go}}\frac{V_{\text{th}} \text{ln}\left( \beta V_{\text{go}} \right) + \gamma_0 \left( \frac{ C_g V_\text{go}}{q}\right)^\frac{2}{3}}{ V_{\text{go}} + V_{\text{th}} + \frac{2\gamma_0}{3} \left( \frac{ C_g V_\text{go}}{q}\right) ^\frac{2}{3}}</div>Combining eq
             <eq id="EfvsVg1"></eq>and
