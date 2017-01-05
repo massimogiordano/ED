@@ -33,7 +33,7 @@
 % % diag(E) % display a vector containing the eigenvaluesdisplay a vector containing the eigenvalues
 
 
-L = 50;
+L = 50e-9;
 N = 1000;
 x = linspace(-L,L,N)';
 dx = x(2) - x(1);
@@ -42,8 +42,8 @@ U = 1/2*10*x.^(2); % quadratic harmonic oscillator potential %
 %U = 1/2*10*x.^(4); % quartic potential
 % Finite square well of width 2w and depth given %
 w = L/50;
-trig = -3:3/100:-0.002;
-U = [1000*ones(1,100) trig zeros(1,800)]';
+trig = 1:400;
+U = [10000*ones(1,100) trig-400 zeros(1,500)]';
 % Two finite square wells of width 2w and distance 2a apart %
 w = L/50; 
 a=3*w;

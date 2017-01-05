@@ -6,12 +6,12 @@ q = 1.60e-19;
 Kb = 8.61673e-5;
 
 L = 50e-9; %2L = 100nm
-N = 100000;
+N = 1000;
 x = linspace(-L,L,N)';
 dx = x(2) - x(1);
 
-trig = -2.7:0.00027/2:-0.0001;
-U = [3*ones(1,50000) trig zeros(1,30000)]'; %guess potential
+trig = -2.7:0.027/2:-0.01;
+U = [3*ones(1,500) trig zeros(1,300)]'; %guess potential
 
 % Three-point finite-difference representation of Laplacian
 % using sparse matrices, where you save memory by only
@@ -52,9 +52,9 @@ Efermi = 0.403; %V
 n = n + m*Kb*300/(pi*hbar^2)*log(1 + exp((Efermi - E(ei))/(Kb*300)))*V(:,ei).^2 ;
 end
 
-xx = [1:50000];
-norm = 0.00000001+2*sum(n)*normpdf(xx,50000,50);
-Nd  = [norm zeros(1,50000)]';
+xx = [1:500];
+norm = 0.00000001+2*sum(n)*normpdf(xx,500,50);
+Nd  = [norm zeros(1,500)]';
 Tot = -q*(Nd-n)./dielcost;
 %solver
 [X, R] = linsolve(zeros(N,N)+Poisson, Tot);
