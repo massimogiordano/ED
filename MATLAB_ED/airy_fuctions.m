@@ -28,7 +28,7 @@ Accuracy_EL = abs((El1 - El0)/El0)
 Airy_energies = 1:length(c);
 P_occupation = 1:length(c);
 for i=1:length(c)
-    Airy_energies(i) = Energy_trig_well(El0, c(i));
+    Airy_energies(i) = Energy_trig_well(El0, c(i))
     P_occupation(i) = fermi(Airy_energies(i), Efermi(V0), T);
 end 
 
