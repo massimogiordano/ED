@@ -189,7 +189,7 @@ end
         <p>
            
           As we can see in the plot $E_f$ intersect only $E_0$ and this point is important because allow to distinguish two regions. To further highlight this behavior we plot the difference between $E_f$ and the two energy sub-bands $E_0$ and $E_1$. 
-          <!--plot-->$E_1$ is always larger than $E_f$ and $E_0$ while $E_0$ in smaller then $E_f$ in region 1 while in the second region $E_0$ is always greater then $E_f$. The width of the first region increase with the temperature. (WHY?!?)  
+          <!--plot-->$E_1$ is always larger than $E_f$ and $E_0$ while $E_0$ in smaller then $E_f$ in region I while in the second region $E_0$ is always greater then $E_f$. The width of the first region increase with the temperature. (WHY?!?)  
           A different model is developed for each regions, at the end they will be unify to obtain a continuous solution. 
           <!--|In the quantum well a high number of bounded states are available, however only the first two are taken into account because of the probability of occupation. We estimated those values assuming a triangular well with maximum potential equal to the built in obtained through the work functions.-->
           
@@ -228,17 +228,17 @@ end
         <section>
           <h2>Region II and approximations</h2>
           <p>It is to be reminded that $E_1$ is significantly greater than both $E_0$ and $E_f$, in addition in region II $E_f - E_0 > 0$. These observations enable to rewrite eq (NS log EF - vera dipendenza) as shown below.
-            <div id="ns2reg" class="equation svg">n_s^{II} \approx D(E_f^{II}-E_0).</div>
+            <div id="ns2reg" class="equation svg">n_s^{II} \approx DV_{\text{th}} \ln \left[ \exp \left(  \frac{E_f - E_0}{V_{\text{th}}}\right) + 1 \right] \approx D(E_f^{II}-E_0)</div>
           </p>This result can be worked out by neglecting the whole second logarithmic term and the constant factor in the argument of the first logarithmic function. Thus, combining eq
           <eq id="nsvgef"></eq>and
           <eq id="ns2reg"></eq>applying the same approximations exploited in region I, the Fermi level and the sheet carrier charge density in region II are analytically described.
           <div id="EfII" class="equation svg">
              
-            E_f^I = V_{\text{go}}\frac{\beta V_{\text{th}} V_{\text{go}}+ \gamma_0 \left( \frac{ C_g V_\text{go}}{q}\right)^\frac{2}{3}}{ \left( 1 +\beta V_{\text{th}} \right )V_{\text{go}}  + \frac{2\gamma_0}{3} \left( \frac{ C_g V_\text{go}}{q}\right) ^\frac{2}{3}} 
+            E_f^{II} = V_{\text{go}}\frac{\beta V_{\text{th}} V_{\text{go}}+ \gamma_0 \left( \frac{ C_g V_\text{go}}{q}\right)^\frac{2}{3}}{ \left( 1 +\beta V_{\text{th}} \right )V_{\text{go}}  + \frac{2\gamma_0}{3} \left( \frac{ C_g V_\text{go}}{q}\right) ^\frac{2}{3}} 
           </div>
           <div id="NsII" class="equation svg">
              
-            n_s^I = \frac{C_g V_{\text{go}}}{q} \frac{  V_{\text{go}}  - \frac{\gamma_0}{3}\left( \frac{ C_g V_\text{go}}{q}\right) ^\frac{2}{3}}{ \left(1 + \beta V_{\text{th}}   \right )V_{\text{go}}+       \frac{2\gamma_0}{3} \left( \frac{ C_g V_\text{go}}{q}\right) ^\frac{2}{3}}
+            n_s^{II} = \frac{C_g V_{\text{go}}}{q} \frac{  V_{\text{go}}  - \frac{\gamma_0}{3}\left( \frac{ C_g V_\text{go}}{q}\right) ^\frac{2}{3}}{ \left(1 + \beta V_{\text{th}}   \right )V_{\text{go}}+       \frac{2\gamma_0}{3} \left( \frac{ C_g V_\text{go}}{q}\right) ^\frac{2}{3}}
           </div>Below, the graphs illustrate the computed dependence of $E_f$ and $n_s$ on $V_g$
           <!--mettere grafici... SE si vogliono mostrare (nell'articolo non sono mostrati)-->
         </section>
