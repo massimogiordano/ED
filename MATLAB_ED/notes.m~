@@ -1,0 +1,5 @@
+tt = 1:500;
+par = 0 + (tt/500 - 0.7).^2;
+gan = -1./(tt-0.1);
+tot = [par gan];
+plot(tot)

@@ -43,7 +43,7 @@ U = 1/2*10*x.^(2); % quadratic harmonic oscillator potential %
 % Finite square well of width 2w and depth given %
 w = L/50;
 trig = 1:400;
-U = [100*ones(1,100) trig-400 zeros(1,500)]';
+U = [10000*ones(1,100) trig-400 zeros(1,500)]';
 % Two finite square wells of width 2w and distance 2a apart %
 w = L/50; 
 a=3*w;
@@ -51,7 +51,8 @@ a=3*w;
 % Three-point finite-difference representation of Laplacian
 % using sparse matrices, where you save memory by only
 % storing non-zero matrix elements
-e = ones(N,1); Lap = spdiags([e -2*e e],[-1 0 1],N,N)/dx^2;
+e = ones(N,1); 
+Lap = spdiags([e -2*e e],[-1 0 1],N,N)/dx^2;
 % Total Hamiltonian
 hbar = 1; m = 1; % constants for Hamiltonian 
 H = -1/2*(hbar^2/m)*Lap + spdiags(U,0,N,N);
@@ -70,4 +71,4 @@ shg
 
 plot(x,100*V(:,1:10)+E(1:10)',x,U)
 hold on 
-surface(A)
+%surface(A)
