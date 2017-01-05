@@ -95,7 +95,19 @@ html
          |words
        section
         h2 Triangular well
-       
+        p
+        |  The triangular quantum well is the most suitable model to describe the 2DEG according to semiclassical approximation. To analyze let us consider a 1-dimensional problem with an uniform and constant electrical field along x-direction $\Epsilon \vec = \Epsilon \hat{x}$ . The electrostatic potential to be added in the time-indipendent single-particle Schroedinger equation in order to implement the interaction of an electron with this electric field is $\phi (x) = q $\Epsilon$ x. It follows that the Schroedinger equation to be solved is:
+        //.equation.svg#eqSCHROD
+        //equazione
+        |Defining the 'characteristic' length and energy $x_0 = \left( \hbar^2 / (2 m^* q \Epsilon\right)^{1/3}$ and $E_0 =\left( (q \Epsilon \hbar)^2 / (2 m^*\right)^{1/3} $ and a new adimensional variable $s = x/x_0 - E/E_0$ eq
+        //citare .equation.svg#eqSCHROD
+        |can be cast in the below expression
+        //.equation.svg#eqSCHROD-AIRY
+        //equazione
+        | This differential equation has known solutions, i.e. the Airy functions. To satisfy physical requirements only Airy function is acceptable, namely $Ai(i)= \frac{1}{\pi} \int_0^{+\inf} \text{cos}\left( xt + \frac{t^3}{3} \,dt \right)$
+        //.equation.svg#z_zero e E_zero
+        //eqni.
+        
        section
         h2 HEMT transistor 
         p
