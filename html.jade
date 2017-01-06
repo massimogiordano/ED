@@ -95,13 +95,51 @@ html
          | III-nitrides have gained remarkable importance since they overcame the limitations of  GaAs based electronic devices for high-temperature applications and enabled to design and to fabricate optoelectronic devices in the blue and violet spectrum range. Moreover, devices working at short wavelength are required in a broad technology range, e.g. laser printers, under water communications and high density information storage. The III-nitrides bandgaps are large and direct. In details, they vary from  0.7eV (InN), 3.4 eV (GaN) and 6.2 eV (AlN)  for wurtzite semiconductors. 
          | Because of the wide energy gap and significant bond strength they can be exploited to produce short wavelength LED and high-temperature transistors. [tesi]
          |In particular, AlGaN/GaN based High Electron Mobility Transistors (HEMT) play a crucial role in next generation 3G/4G mobile phone stations, radar, mixers and oscillators. [lenka, chractersitics study]
-         | GaN-based materials provide high frequency operation (tens of GHz), high saturation velocity ($\sim 10^7 cm/s$), large breakdown electric field ($3 MV/cm$) and high power density of an AlGaN/GaN HEMT over 11W/mm. Most importantly, polarization fields allow a larger two dimensional electron gas (extensively discussed in the following chapter) to be confined than in AlGaAs/GaAs HEMT. For all these reason GaN-based HEMTs have a key role in developing advanced electronic devices.  Despite all these highly promising features, there is still challenging work to carry out in order to gain a deep comprehension and control of band structure and quantum confinement in III-nitrides based transistors. In fact, polarization charges at the heterointerface and electronic properties are to be understood to achieve optical and electronic application in novel devices.
+         | GaN-based materials provide high frequency operation (tens of GHz), high saturation velocity ($\sim 10^7 cm/s$), large breakdown electric field ($3 MV/cm$) and high power density of an AlGaN/GaN HEMT over 11W/mm. Most importantly, polarization fields allow a larger two dimensional electron gas (extensively discussed later on in the report) to be confined than in AlGaAs/GaAs HEMT. For all these reason GaN-based HEMTs have a key role in developing advanced electronic devices.  Despite all these highly promising features, there is still challenging work to carry out in order to gain a deep comprehension and control of band structure and quantum confinement in III-nitrides based transistors. In fact, polarization charges at the heterointerface and electronic properties are to be understood to achieve optical and electronic application in novel devices.
        section
-        h2 Equilibrium condition and two dimensional electron gas (2DEG) 
+        h2 Heterojunction equilibrium 
         p
-        | Heterojunction is formed whenever two materials with different bandgaps are brought to contact. To realize thermodynamic equilibrium the fermi level has to be constant thoughout the whole system so there is charge flow until the mentioned condition is achieved. Electrons diffuse from higher Fermi energy material to the lower Fermi energy one and holes diffuse toward oppositre direction. Carriers flow leads to not neutral region close to the heterointerface hence generating an electric field that causes the bands to bend. This built-in electrostatic field generates a drift current that counterbalance the diffusion and these counteracting effects make the system evolve to equilibrium.
-       section
-        h2 Triangular well
+        | Heterojunction is formed whenever two materials with different bandgaps are brought to contact. To realize thermodynamic equilibrium the fermi level has to be constant thoughout the whole system so there is charge flow until the mentioned condition is achieved. Electrons diffuse from higher Fermi energy material to the lower Fermi energy one and holes diffuse toward opposite direction. Carriers flow leads to not neutral region close to the heterointerface hence generating an electric field that causes the bands to bend. This built-in electrostatic field generates a drift current that counterbalance the diffusion and these counteracting effects make the system evolve to equilibrium.
+        | The below image is devoted to illustrate the band diagram evolution. The following physical description refers to this image.
+        //include img/bandDiagr
+        //| The built-in potential is determined by the driving force of this mechanism i.e. the Fermi levels difference:
+        //.equation.svg#Vbi
+        //| qV_{bi} = E_{f,2} - E_{f,1}
+        | All quantities can be expressed through bulk semiconductor model formulas and the interface can be treated with the formalism develeped for homojunctions.
+        | The Anderson's rule, also known as affinity rule, states that the band bending is dictated by electron affinities and this implies that the conduction and valence band discontinuities are respectively given by:
+        .equation.svg#affinityrule
+         | \Delta E_c = \text{q}(\chi_2 - \chi_1)\quad \text{and}\quad \Delta E_v = \Delta E_g - \text{q}(\chi_2 - \chi_1)
+        | Let us consider a n-doped (material 2) and a p-doped (material 1) semiconductors forming an heterojunction as example. This may be the case for AlGaN/GaN interface with Si donors in AlGaN and Mg acceptors in GaN.
+        | At equilibrium bands are bent and the interface discontinuity is conserved whereas the vacuum energy level is continous throught the whole system and it is not constant. The relative band alignment is achieved by the creation of built-in electric field whose related electrostatic potential is:
+        .equation.svg#Vbi
+         | qV_{bi} = E_{f,2} - E_{f,1} 
+        | Expliciting the Fermi energies as function of dopants concentration the previous expression can be cast as follows:
+        .equation.svg#Vbi2
+         | qV_{bi} = E_{g,1} - \Delta E_c + \text{ln}\left(\frac{N_a N_d}{N_{c,2}N_{v,1}}\right)
+        | $N_a$ and $N_d$ indicate  the dopant concentration of the two materials while $N_{c,2}$ and $N_{v,1}$ indicate the effective density of states in the conduction and the valence band of the specified semiconductors.
+        | It is to be stressed the fact that heterostructures are non homogenous media thus the key physical quantity to be examined at the interface is the electrical displacement field $\vec D$. Gauss's law is rewritten in its most general form:
+        .equation.svg#electricdisplacement
+         | {\rm div}\, \vec D = \rho \quad with \, \, \vec D = \epsilon \vec \varepsilon + \vec P
+        | It is worthwile noticing that unlike homojunction junction law applied to heterojunctions yields that minority carrier injection is enhanced toward smaller bandgap material. It is due to the ratio of minority carrier concentration at each boundary of deleption regions which depends on doping level but also on energy bandgap and the dependence from the latter is exponential.
+        | Band discontinuity may be so high at the interface that a potential well may form and create carrier and/or optical confinement. The quantum well originates from $E_c$ bending enough to become lower than the Fermi level for a close range near the junction in the smaller bandgap material. Electrons are trapped at the interface on the p-side (typical confinement length $1 \div 10 nm)$. Carrier trapping is 1D therefore on the interface parallel surface electrons can be considered freely travelling since dopants acting as scattering center are reduced very close to the interface. Consequently quantization effects affect band structure and density of states (DOS or g).
+        section
+        h2 Two dimensional electron gas (2DEG)
+        p
+        | It is the sheet carrier charge concentration ($n_s$) forced by the built-in electric field to the heterointerface. Subbands are created due to quantum confinement.       
+        | Schroedinger's equation and Poisson equation are to be solved self-consistently if the real physical solution is sought. Furthermore, the total potential $V_{tot}$ should account for the electrostatic electron-electron repulsion, exchange-correlation effect and barrier potential. The interface charge concentration $n_s$ influences $V_{tot}$ and at the same time $n_s$ is by the sum of each subband contribution weighted by the probability to find electrons in that state, i.e. the square modulus of the wavefunction. Therefore what it follows, it is a simple, semiclassical yet efficient explanation of the physics underlying this system.
+        | Stationary energy levels are determined by the almost free motion parallel (yz plane) to the junction plus the confinement normal (x direction) to it.
+        .equation.svg#electricdisplacement
+         | E_{j,\vec k_{//}} = E_j + \frac{\hbar^2 k_{//}}{2m*}
+        | Let us consider the 2DEG within a large potential well in yz plane with infinite barriers such that wavefunctions are null at boundaries. The density of states taking into account all subbands contributions is:
+        .equation.svg#g2D
+         | g_{2D}(E)=  \sum_{j=1}^{+\infty} \left[ \frac{4 \pi m^*}{\hbar ^2}H(E-E_j) \right]
+        |The DOS is then used to calculate the sheet carrier charge density of the 2DEG:
+        .equation.svg#ns2D
+         | n_s = \int_{E_c}^{+\infty} g_{2D}(E)f_{FD}(E) \, dE = \frac{4 \pi m^* K_B T}{h^2}\sum_j ln \left[ 1+\frac{E_f - E_j}{K_B T}\right]
+        
+        
+        section
+        h2 Quantum triangular well
         p
         |  The triangular quantum well is the most suitable model to describe the 2DEG according to semiclassical approximation. To analyze let us consider a 1-dimensional problem with an uniform and constant electrical field along x-direction $\vec \varepsilon  = \varepsilon \hat{x}$ . The electrostatic potential to be added in the time-indipendent single-particle Schroedinger equation in order to implement the interaction of an electron with this electric field is $\phi (x) = q \varepsilon x $. It follows that the Schroedinger equation to be solved is:
         //.equation.svg#eqSCHROD
@@ -109,7 +147,7 @@ html
         |Defining the 'characteristic' length and energy 
         .equation.svg
          |x_0 = \left( \frac{\hbar^2}{2 m^* q \varepsilon }\right)^{1/3} \text{and} \ \ \ E_0 =\left(   \frac{ (q \varepsilon \hbar)^2 }{2 m^*} \right)^{1/3} 
-        |and a new adimensional variable $s = x/x_0 - E/E_0$ eq
+        |and a new adimensional variable $s = \frac{x}{x_0} - \frac{E}{E_0}$ eq
         //citare .equation.svg#eqSCHROD
         |can be cast in the below expression
         //.equation.svg#eqSCHROD-AIRY
@@ -127,12 +165,16 @@ html
         .equation.svg#Subbands-NS23
          | E_j = \gamma_j (n_s)^{2/3}
         
-        | All $\gamma_j$ are experimentally determined.
-        
+        | This step is reasonable, in fact even though the relationship of $E_j$ with $n_s$ is physically acceptable, the triangular well is a simplicistic approximation therefore the proportionality constants are experimentally determined.
+        section
+        h2 Wurtzite heterojunctions
+        p
+        |  words
        section
-        h2 HEMT transistor 
+        h2 High Electron Mobility Transistors (HEMTs)
         p
          |high-speed and high-power applications.  These devices offer advantages such as high breakdown voltage, high charge density, and good electron mobility [t7.3]–[t7.5]
+         |Such gas has revealed superior transport properties in particulat its high electrical mobility can reach $\sim 10^3 cm{2}/(V s)$ at room temperature ,cita -Analysis of thin AlN carrier exclusion layers in AlGaN/GaN microwave heterojunction field-effect transistors- R S Balmer et al.,Semicond. Sci. Technol. 19 (2004) L65–L67.
         
         
       //______________________    
@@ -152,7 +194,7 @@ html
          
          
       section
-        h2 Discussion of the contribution of sub-bands to $n_s$
+        h2 Contribution of sub-bands to $n_s$
         p
          |The reason why only the first two sub-bands are taken into account relies not on the number of bounded states present in the quantum well but on their probability of occupation. To give an estimate of those values we  have assumed that the quantum-well is triangular and the energies bounded states can not be higher than the built in potential.  
          |::::
