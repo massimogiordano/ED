@@ -223,7 +223,7 @@
       /><circle r="4" style="fill:none;" cx="-0.5" transform="translate(390.6,-283.8217)" cy="-0.5"
       /><circle r="4" style="fill:none;" cx="-0.5" transform="translate(405.0667,-291.2765)" cy="-0.5"
       /><circle r="4" style="fill:none;" cx="-0.5" transform="translate(419.5333,-298.6453)" cy="-0.5"
-      /><line transform="translate(-87.4667,-332.6728)" x1="73" x2="507" y1="137.0258" style="fill:none; stroke-linejoin:round; stroke:black;" y2="137.0258"
+      /><line transform="translate(-87.4667,-332.6728)" x1="73" x2="507" y1="325.3534" style="fill:none; stroke-linejoin:round; stroke:black;" y2="325.3534"
     /></g
     ><g style="fill:white; text-rendering:optimizeSpeed; color-rendering:optimizeSpeed; image-rendering:optimizeSpeed; shape-rendering:crispEdges; color-interpolation:sRGB; stroke:white;"
     ><path style="stroke:none;" d="M221 348 L221 285 L494 285 L494 348 Z"
