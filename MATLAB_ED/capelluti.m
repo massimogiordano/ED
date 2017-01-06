@@ -28,9 +28,9 @@ Vth = T*Kb; %bolzamn costant * T
 P2 = D*Vth;
 P1 = ep/(q*d);
 mo = 9.11e-31; %mass of electron
-h = 1.05e-34;  %Js 
-hbar = h/(2*pi);
-m = 0.22*mo;    %effective mass cit: http://journals.aps.org/prb/pdf/10.1103/PhysRevB.57.1374
+hbar = 1.05e-34;  %Js 
+h = hbar*(2*pi);
+m = 0.24*mo;    %effective mass cit: http://journals.aps.org/prb/pdf/10.1103/PhysRevB.57.1374
 
 DeltaV= 100; %resolution - number of points in the plot
 
@@ -38,7 +38,7 @@ Efermi= 1:DeltaV;
 Volts = 1:DeltaV;
 E1 = 1:DeltaV;
 E0 = 1:DeltaV;
-
+n_s=1:DeltaV;
 
     clf
     kk = kk +1;
@@ -51,7 +51,7 @@ E0 = 1:DeltaV;
         Volts(i) = Vg;
 
         ns = @(Vg, Ef) P1*(Vg - Ef);
-
+        n_s(i)=ns(Vgo,Efermi(i));
         %two bands in juction well as define in the paper
         E1(i) = l1*ns(Vgo,Efermi(i))^(2/3);
         E0(i) = l0*ns(Vgo,Efermi(i))^(2/3);

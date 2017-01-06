@@ -23,7 +23,7 @@ Kb = 8.61673e-5;
 mo = 9.11e-31;   %mass of electron
 hbar = 1.05e-34;    %Js 
 h = hbar*(2*pi);
-m = 0.22*mo;     %effective mass cit: http://journals.aps.org/prb/pdf/10.1103/PhysRevB.57.1374
+m = 0.24*mo;     %effective mass cit: http://journals.aps.org/prb/pdf/10.1103/PhysRevB.57.1374
 
 DeltaV= 100;     %resolution - number of points in the plot
 
