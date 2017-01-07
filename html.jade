@@ -90,50 +90,55 @@ html
        section
         h2 Introduction to  heterostructures
         p
-         |High-power and high-frequency applications, as well as optoelectronics, RF electronics, demand materials the which characteristics can be thoroughly tailored. Since alloys can widely change their optical, transport and electrical properties upon their concentration, are the most used material for those applications.  
-         |In general alloys are based on different semiconductive compounds (e.g. GaN, GaAs and InP). Depending on the number of elements they are made of they can be ternary or quaternary such as $Al_xGa_{1-x}As$ and $In_xGa_{1-x}As_yP_{1-y}$.
-         |<br> An heterostructure is a physical system made of materials with different bandgap but with resembling structural properties i.e. crystal lattice and lattice parameter.
-         |Heteroepitaxy is the method underlying the modern growth technologies to build these systems, usually by MOCVD or MBE. They may harness buffer layers (i.e. alloys with gradually changing composition) to smooth the transition from one material to another to reduce strain and avoid defects.<br>
-         |The III-nitrides bandgaps are large and direct, in detail, considering Wurtzite structure, they can vary from  0.7eV (InN), 3.4 eV (GaN) up to 6.2 eV (AlN). 
-         | Because of the wide energy gap and significant bond strength III-nitrides have gained remarkable importance, mainly because they overcame the limitations of GaAs based electronic devices, enabling the design and fabrication of optoelectronic devices at short wavelength such as LED, laser printers, under water communications, high density information storage and high-temperature transistors. 
-         cit#tesi
-         |<br>In particular, AlGaN/GaN based High Electron Mobility Transistors (HEMT) play a crucial role in next generation 3G/4G mobile phone stations, radar, mixers and oscillators. 
-         cit#lenka
-         |<br>GaN-based materials provide high frequency operation (tens of GHz), high saturation velocity ($\sim 10^7 cm/s$), large breakdown electric field ($3 MV/cm$) and high power density of an AlGaN/GaN HEMT over $11W/mm$. Even more important are polarization fields which allow the formation of larger two dimensional electron gas (see chapter ##) compared to AlGaAs/GaAs based HEMT. 
-         |<br>For all these reasons GaN-based HEMTs have a key role in the developing of advanced electronic devices. However, despite all the highly promising features, there is still lot of challenging work to carry out in order to gain a deep understanding of their behavior. In fact, in order to fabricate novel devices based on III-nitrides, good description of band structure, quantum confinement polarization charges and the electron mobility have to be obtained. 
-         
+        |High-power and high-frequency applications, as well as optoelectronics, RF electronics, demand materials the which characteristics can be thoroughly tailored. Since alloys can widely change their optical, transport and electrical properties upon their concentration, are the most used material for those applications.  
+        |In general alloys are based on different semiconductive compounds (e.g. GaN, GaAs and InP). Depending on the number of elements they are made of they can be ternary or quaternary such as $Al_xGa_{1-x}As$ and $In_xGa_{1-x}As_yP_{1-y}$.
+        |<br> An heterostructure is a physical system made of materials with different bandgap but with resembling structural properties i.e. crystal lattice and lattice parameter.
+        |Heteroepitaxy is the method underlying the modern growth technologies to build these systems, usually by MOCVD or MBE. They may harness buffer layers (i.e. alloys with gradually changing composition) to smooth the transition from one material to another to reduce strain and avoid defects.<br>
+        |The III-nitrides bandgaps are large and direct, in detail, considering Wurtzite structure, they can vary from  0.7eV (InN), 3.4 eV (GaN) up to 6.2 eV (AlN). 
+        | Because of the wide energy gap and significant bond strength III-nitrides have gained remarkable importance, mainly because they overcame the limitations of GaAs based electronic devices, enabling the design and fabrication of optoelectronic devices at short wavelength such as LED, laser printers, under water communications, high density information storage and high-temperature transistors. 
+        cit#tesi
+        |<br>In particular, AlGaN/GaN based High Electron Mobility Transistors (HEMT) play a crucial role in next generation 3G/4G mobile phone stations, radar, mixers and oscillators. 
+        cit#lenka
+        |<br>GaN-based materials provide high frequency operation (tens of GHz), high saturation velocity ($\sim 10^7 cm/s$), large breakdown electric field ($3 MV/cm$) and high power density of an AlGaN/GaN HEMT over $11W/mm$. Even more important are polarization fields which allow the formation of larger two dimensional electron gas (see chapter ##) compared to AlGaAs/GaAs based HEMT. 
+        |<br>For all these reasons GaN-based HEMTs have a key role in the developing of advanced electronic devices. However, despite all the highly promising features, there is still lot of challenging work to carry out in order to gain a deep understanding of their behavior. In fact, in order to fabricate novel devices based on III-nitrides, good description of band structure, quantum confinement polarization charges and the electron mobility have to be obtained. 
+        
        section
         h2 Heterojunction equilibrium 
         p
-        | Heterojunction is formed whenever two materials with different bandgaps are brought to contact. Electrons start to diffuse from higher Fermi energy material to the lower one while holes diffuse toward the opposite direction. The carriers flow leads to an accumulation of electrons and hole at the interface which generates an electric field, which generates a drift force on the carries counterbalancing the diffusion process. The two effects, diffusion and drift, are balanced at the thermodynamic equilibrium that is obtained when Fermi Level results constant over the whole system. 
-        |<br>The presence of the electric field at the interface generates the so-called built-in potential, which causes the  bands structure to bend.
-        | Below, the image shows the band diagram structure and its evolution at the interface. 
+        | Heterojunction is formed whenever two materials with different bandgaps are brought to contact. Electrons start to diffuse from the higher Fermi energy material to the lower one while holes diffuse toward the opposite direction. The carriers flow leads to an accumulation of charges at the interface creating an electric field. The electric field generates a drift force on the carries counterbalancing the diffusion process. The two effects, diffusion and drift, are balanced at the thermodynamic equilibrium that is obtained when Fermi Level results constant over the whole system. 
+        |<br>The presence of the electric field at the interface generates the so called built-in potential, which causes the  bands structure to bend.
+        //spostato
+        |<br>The solution, as discussed in chapter ##, can be found calculating self-consistently the interdependence between the Poisson equation, which takes into account the charge densities and the dielectric discontinuities, and the Schrodinger equation, which allows to calculate the number of electrons trapped in the built-in potential. 
+        |<br> Below, the image shows the band diagram structure and its evolution at the interface. 
         //include img/bandDiagr
         | The conduction and valence band discontinuities are determinate by the electron affinities $\chi_i$ of the two semiconductors using the Anderson's rule, also known as affinity rule, which reads:
         .equation.svg#affinityrule 
          | \Delta E_c = \text{q}(\chi_2 - \chi_1)\quad \text{and}\quad \Delta E_v = \Delta E_g - \text{q}(\chi_2 - \chi_1)
-        |Therefor, the built in potential at a heterojuction made of two intrinsic semiconductors becomes: 
-        .equation.svg
-         | V_{\text{bi}} = \Delta \chi + \frac{\Delta E_g}{2q}
-        | Let us consider a n-doped (material 2) and a p-doped (material 1) semiconductors forming an heterojunction as example. This may be the case for AlGaN/GaN interface with Si donors in AlGaN and Mg acceptors in GaN.
-        | At equilibrium bands are bent and the interface discontinuity is conserved whereas the vacuum energy level is continous throught the whole system and it is not constant. The relative band alignment is achieved by the creation of built-in electric field whose related electrostatic potential is:
-        .equation.svg#Vbi
-         | qV_{bi} = E_{f,2} - E_{f,1} 
-        | Expliciting the Fermi energies as function of dopants concentration the previous expression can be cast as follows:
+        |The vacuum energy level is continuous through all the junction but not constant because it is affected by the formation of the built-in potential. Consequentially, it results parallel to the bands. 
+        |<br>Therefore, for an heterostructure made of two intrinsic semiconductors the built-in potential at thermal equilibrium  becomes: 
+        .equation.svg#builtin
+         | V_{\text{bi}} = \frac{E_{f,2} - E_{f,1}}{q} = \Delta \chi + \frac{\Delta E_g}{2q}
+        |However if the junction is made of doped materials eq
+        cit#builtin 
+        | is no longer valid. Considering a p-doped material 1 and a n-doped material 2 forming an heterojunction we have to express the Fermi energies as function of the dopants concentrations. Thus, the built-in potential can be written as:
         .equation.svg#Vbi2
-         | qV_{bi} = E_{g,1} - \Delta E_c + \text{ln}\left(\frac{N_a N_d}{N_{c,2}N_{v,1}}\right)
-        | $N_a$ and $N_d$ indicate  the dopant concentration of the two materials while $N_{c,2}$ and $N_{v,1}$ indicate the effective density of states in the conduction and the valence band of the specified semiconductors.
-        | It is to be stressed the fact that heterostructures are non homogenous media thus the key physical quantity to be examined at the interface is the electrical displacement field $\vec D$. Gauss's law is rewritten in its most general form:
-        .equation.svg#electricdisplacement
+         | qV_{bi} = E_{g,1} - \Delta E_c + \text{ln}\left(\frac{N_1 N_2}{N_{c,2}N_{v,1}}\right)
+        | where $N_1$ and $N_1$ indicate the dopant concentration while $N_{c,2}$ and $N_{v,1}$ indicate the effective density of states in the conduction and the valence band of the specified semiconductors.
+        //|<br> It is to be stressed the fact that heterostructures are non homogenous media thus the key physical quantity to be examined at the interface is the electrical displacement field $\bf D$. 
+        //|<br>Gauss's law is rewritten in its most general form:
+        //.equation.svg#electricdisplacement
          | \vec {\triangledown} \cdot  {\bf D} = \rho \quad \text{with} \quad \, {\bf D} = \epsilon_0 \vec{\bf \varepsilon }+ {\bf P}
-        | It is worthwile noticing that unlike homojunction junction law applied to heterojunctions yields that minority carrier injection is enhanced toward smaller bandgap material. It is due to the ratio of minority carrier concentration at each boundary of deleption regions which depends on doping level but also on energy bandgap and the dependence from the latter is exponential.
-        | Band discontinuity may be so high at the interface that a potential well may form and create carrier and/or optical confinement. The quantum well originates from $E_c$ bending enough to become lower than the Fermi level for a close range near the junction in the smaller bandgap material. Electrons are trapped at the interface on the p-side (typical confinement length $1 \div 10 nm)$. Carrier trapping is 1D therefore on the interface parallel surface electrons can be considered freely traveling since dopant acting as scattering center are reduced very close to the interface. Consequently quantization effects affect band structure and density of states (DOS or g).
+        //| It is worth to mention that unlike homojunction law applied to heterojunctions yields that minority carrier injection is enhanced toward smaller bandgap material. It is due to the ratio of minority carrier concentration at each boundary of deleption regions which depends on doping level but also on energy bandgap and the dependence from the latter is exponential.
+        |In the potential well a certain number of bound states are present, if their energies are lower than the Fermi Energies they will be populated by electrons, generating a two dimensional high-mobility carries sheet parallel to the interface.  
+        |Since carriers come from the doped regions but travel in the undoped one, they can be considered as traveling freely because scattering with dopant does not occur. 
+        |<br>In addition, due to dimensional constrains and the typical length of the well of $1 \div 10 nm$, quantization effects appears on the band structure and density of states (DOS or g).
+        
        section
         h2 Two dimensional electron gas (2DEG)
         p
-        | It is the sheet carrier charge concentration ($n_s$) forced by the built-in electric field to the heterointerface. Subbands are created due to quantum confinement.       
+        | The 2DEG is the sheet carrier charge concentration ($n_s$) forced by the built-in electric field to the heterointerface. Subbands are created due to quantum confinement.       
         | Schroedinger's equation and Poisson equation are to be solved self-consistently if the real physical solution is sought. Furthermore, the total potential $V_{tot}$ should account for the electrostatic electron-electron repulsion, exchange-correlation effect and barrier potential. The interface charge concentration $n_s$ influences $V_{tot}$ and at the same time $n_s$ is by the sum of each subband contribution weighted by the probability to find electrons in that state, i.e. the square modulus of the wavefunction. Therefore what it follows, it is a simple, semiclassical yet efficient explanation of the physics underlying this system.
-        | Stationary energy levels are determined by the almost free motion parallel (yz plane) to the junction plus the confinement normal (x direction) to it.
+        | Stationary energy levels are determined by the almost free motion on the parallel to the junction plus the confinement normal to it.
         .equation.svg#e_values
          | E_{j,\vec k_{//}} = E_j + \frac{\hbar^2 k_{//}}{2m*}
         | Let us consider the 2DEG within a large potential well in yz plane with infinite barriers such that wavefunctions are null at boundaries. The density of states taking into account all subbands contributions is:
@@ -222,7 +227,7 @@ html
         h2 Contribution of sub-bands to $n_s$
         p
          |The reason why only the first two sub-bands are taken into account relies not on the number of bounded states present in the quantum well but on their probability of occupation. To give an estimate of those values we  have assumed that the quantum-well is triangular and the energies bounded states can not be higher than the built in potential.  
-         |::::
+         |:::
       section
         h2 Fermi energy and Sub-bands with respect to Gate Voltage
         p
