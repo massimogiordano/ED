@@ -56,7 +56,10 @@ mo = 9.11e-31;   %mass of electron
 hbar = 1.05e-34;    %Js 
 h = hbar*(2*pi);
 m = 0.24*mo;
-n = n + m*Kb*300/(pi*hbar^2)*log(1 + exp((Efermi - E(ei))/(Kb*300)))*V(:,ei).^2 ;
+Kb1 = 1.3806485e-23;
+Kb = 8.61673e-5;
+
+n = n + m*Kb1*300/(pi*hbar^2)*log(1 + exp((Efermi - E(ei))/(Kb*300)))*V(:,ei).^2 ;
 end
 
 xx = [1:500];
@@ -66,9 +69,10 @@ Tot = -q*(Nd-n)./dielcost;
 %solver
 [X, R] = linsolve(zeros(N,N)+Poisson, Tot);
 % 0.195 eV
-X = X./max(abs(q*X))*10
-DeltaE =  -[19.5*ones(500,1)' 0*ones(500,1)']; %zeros(1000,1); 
-U = -q*X-DeltaE';
+X = X; %max(abs(q*X))*10
+DeltaE =  -[1.95*ones(500,1)' 0*ones(500,1)']; %zeros(1000,1); 
+%U = -q*X-DeltaE';
+
 end
 plot(U)
 plot(x,50*V(:,1:1)+E(1:1)',x,U)

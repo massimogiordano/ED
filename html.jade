@@ -138,13 +138,17 @@ html
         p
         | The 2DEG is the sheet carrier charge concentration ($n_s$) forced by the built-in electric field to the heterointerface. Subbands are created due to quantum confinement.       
         | Schroedinger's equation and Poisson equation are to be solved self-consistently if the real physical solution is sought. Furthermore, the total potential $V_{tot}$ should account for the electrostatic electron-electron repulsion, exchange-correlation effect and barrier potential. The interface charge concentration $n_s$ influences $V_{tot}$ and at the same time $n_s$ is by the sum of each subband contribution weighted by the probability to find electrons in that state, i.e. the square modulus of the wavefunction. Therefore what it follows, it is a simple, semiclassical yet efficient explanation of the physics underlying this system.
-        | Stationary energy levels are determined by the almost free motion on the parallel to the junction plus the confinement normal to it.
+        | The energy of each particle is given by the energy of the sub-band plus the kinetic energy the electron has moving in the two dimensional plane parallel to the junction. Thus, the available energy levels are determined by:
         .equation.svg#e_values
-         | E_{j,\vec k_{//}} = E_j + \frac{\hbar^2 k_{//}}{2m*}
-        | Let us consider the 2DEG within a large potential well in yz plane with infinite barriers such that wavefunctions are null at boundaries. The density of states taking into account all subbands contributions is:
+         | E_{j,\vec k_{//}} = E_j + \frac{\hbar^2 k^2_{//}}{2m^*}
+        //| Let us consider the 2DEG within a large potential well in yz plane with infinite barriers such that wavefunctions are null at boundaries. The density of states taking into account all subbands contributions is:
+        |Consequentially, the density of states of the 2DEG is a step function because as $E>E_j$ a higher sub-band can host more electrons. However, they can assume any value of energy because in each sub-band they can accelerate in the plane direction. The final formula for the 2DEG density of stats results:  
         .equation.svg#g2D
-         | g_{2D}(E)=  \sum_{j=1}^{+\infty} \left[ \frac{4 \pi m^*}{\hbar ^2}H(E-E_j) \right]
-        |The DOS is then used to calculate the sheet carrier charge density of the 2DEG:
+         | g_{2D}(E)=  \sum_{j=1}^{+\infty} \left[ \frac{4 \pi m^*}{\hbar ^2}\text{H}(E-E_j) \right]
+        |Where H is the Heaviside step function, which increase of 1  in correspondence of each $E_j$. The figure below shows the density of state for a typical two dimensional gas.  
+        center
+         img(src="img/density.png" style="  width: 500px;")
+        |<br>Considering the probability of occupation of each sub-band, the DOS is used to calculate the sheet carrier charge density of the 2DEG as follow.<br>
         .equation.svg#ns2D
          | n_s = \int_{E_c}^{+\infty} g_{2D}(E)f_{FD}(E) \, dE = \frac{4 \pi m^* K_B T}{h^2}\sum_j ln \left[ 1+\frac{E_f - E_j}{K_B T}\right]
         
@@ -191,8 +195,8 @@ html
         | Surface defects and surface contamination can screen bound surface charge due to polarization discotinuity across an interface. Such sheet charge accumulation can lead to two dimensional electron gas formation because it can occur that a surface electron density builds up in order to compensate the excess of positive polarization induced charge.
         | It should be clear at this point that 2DEG in AlGaN/GaN devices is influenced by internal as well as external properties. This opens new ways to modulate carrier concentration of the 2DEG with respect to GaAs-based devices. Sensors exploiting polarization induced 2DEG can be built and these can rely on three main working principle: surface charge manipulation (interaction with ions and molecules), mechanical stress application (pressure) and direct carriers manipulation (external electric field).
        section
-        h2 High Electron Mobility Transistors (HEMTs)
-        p
+         h2 High Electron Mobility Transistors (HEMTs)
+         p
 
          //|high-speed and high-power applications.  These devices offer advantages such as high breakdown voltage, high charge density, and good electron mobility [t7.3]–[t7.5]
          //|Such gas has revealed superior transport properties in particular its high electrical mobility can reach $\sim 10^3 cm^{2}/(V s)$ at room temperature
@@ -214,8 +218,8 @@ html
         
       //______________________    
       section
-        h1 Charge density Analytical Model
-        p
+         h1 Charge density Analytical Model
+         p
          | In order to rapidly and accurately simulate HEMT devices an analytical expression for density of the two dimensional gas $n_s$ is required.
          |So far $n_s$ has been usually expressed with numerical calculations, which require high computational power due to their iterative methods, or through empirical models, which use large number of empirical parameters obtained by experimental data. 
          |At the beginning of the 80s the interdependence between $n_s$ and $E_f$ was at first assumed constant 
@@ -229,13 +233,13 @@ html
          
          
       section
-        h2 Contribution of sub-bands to $n_s$
-        p
+         h2 Contribution of sub-bands to $n_s$
+         p
          |The reason why only the first two sub-bands are taken into account relies not on the number of bounded states present in the quantum well but on their probability of occupation. To give an estimate of those values we  have assumed that the quantum-well is triangular and the energies bounded states can not be higher than the built in potential.  
          |:::
       section
-        h2 Fermi energy and Sub-bands with respect to Gate Voltage
-        p
+         h2 Fermi energy and Sub-bands with respect to Gate Voltage
+         p
          |In order to obtain $n_s$ we solved numerically the two equations system of eq cit 1-2, as extensively described in chapter ##2DEG. Since $n_s$ is strictly dependent to the relative positions between the sub-bands and the Fermi Energy it is important to calculate also $E_0$ and $E_1$ using the equations 
          eq#Subbands-NS23
          |, as explained in the previous chapter. 
@@ -303,7 +307,7 @@ html
              .equation.svg#efin1
               |E_f^{I} \approx \gamma_0 (n_s^I)^{\frac{2}{3}} + V_{\text{th}} \text{ln} \left( \frac{n_s^I}{D V_{\text{th}}}\right)
              |In the following plot we can see how the approximation fit well the Fermi Energy in the first region, the maximum absolute error is about ## and lies on the separation line between the two regions. 
-             |In order to find out how the gate bias determinate explicitly $E_f$ and  $n_s$ we have to delete the interdependence of $E_f$ and $n_s$ in eq
+             |In order to find out how the gate bias determinate explicitly $E_f$ and  $n_s$ we have to delete the interdependence of $E_f$ and $n_s$ in eq 
              eq#efin1
              |. To do so we replace $n_s$ in eq 
              eq#efin1
