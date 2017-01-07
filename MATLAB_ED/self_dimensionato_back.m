@@ -1,18 +1,17 @@
+mo = 9.11e-31;   %mass of electron
 
-L = 50; %2L = 100nm
+hbar = 1.05e-34
+m = 0.22*mo;     %effective mass cit: http://journals.aps.org/prb/pdf/10.1103/PhysRevB.57.1374
+q = 1.60e-19;
+Kb = 8.61673e-5;
+
+L = 50e-9; %2L = 100nm
 N = 1000;
 x = linspace(-L,L,N)';
 dx = x(2) - x(1);
 
-Eltrig = -2.256463756872821e-3*51.42208619083232; %eV/51 = ATOMIC UNIT : HA/BOHR
-DeltaPot = Eltrig*dx;
-trig = 1:900; %-0.2:0.2/900:-0.00002;
-
-U = [50*ones(1,100) -DeltaPot*trig]';
-
-
-% trig = -2.7:0.027/2:-0.01;
-% U = [3*ones(1,500) trig zeros(1,300)]'; %guess potential
+trig = -2.7:0.027/2:-0.01;
+U = [3*ones(1,500) trig zeros(1,300)]'; %guess potential
 
 % Three-point finite-difference representation of Laplacian
 % using sparse matrices, where you save memory by only
@@ -23,7 +22,6 @@ Lap = spdiags([e -2*e e],[-1 0 1],N,N)/dx^2;
 for i=1:1
 % Total Hamiltonian
 % constants for Hamiltonian 
-hbar = 1; m = 0.24; % constants for Hamiltonian 
 H = -1/2*(hbar^2/m)*Lap + spdiags(U,0,N,N);
 %H = -1/2*Lap + spdiags(U,0,N,N);
 
@@ -51,22 +49,17 @@ dielcost = [9*ones(1,500) 11*ones(1,500)]';
 n=0;
 for ei=1:nmodes
 Efermi = 0.403; %V
-mo = 9.11e-31;   %mass of electron
-hbar = 1.05e-34;    %Js 
-h = hbar*(2*pi);
-m = 0.24*mo;
 n = n + m*Kb*300/(pi*hbar^2)*log(1 + exp((Efermi - E(ei))/(Kb*300)))*V(:,ei).^2 ;
 end
 
-xx = [1:100];
-norm = 0.00001+2*sum(n)*normpdf(xx,500,50);
+xx = [1:500];
+norm = 0.00000001+2*sum(n)*normpdf(xx,500,50);
 Nd  = [norm zeros(1,500)]';
 Tot = -q*(Nd-n)./dielcost;
 %solver
 [X, R] = linsolve(zeros(N,N)+Poisson, Tot);
 % 0.195 eV
-X = X./max(X)*10
-DeltaE =  -[1.95*ones(500,1)' 0*ones(500,1)']; %zeros(1000,1); 
-U = -X-0*DeltaE';
+DeltaE =  -[19.5*ones(500,1)' 0*ones(500,1)']; %zeros(1000,1); 
+%U = -X-DeltaE';
 end
 plot(U)

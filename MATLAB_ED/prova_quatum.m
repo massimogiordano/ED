@@ -32,21 +32,20 @@
 % % E % display eigenvalue matrix
 % % diag(E) % display a vector containing the eigenvaluesdisplay a vector containing the eigenvalues
 
-
-L = 50;
+L = 50; %L=50 -> 2L = 5nm 
 N = 1000;
 x = linspace(-L,L,N)';
 dx = x(2) - x(1);
 
-Eltrig = -0.01357419082643;
+Eltrig = -2.256463756872821e-3*51.42208619083232; %eV/51 = ATOMIC UNIT : HA/BOHR
 DeltaPot = Eltrig*dx;
-trig = 1:9000; %-0.2:0.2/900:-0.00002;
-
-U = [10*ones(1,1000) -DeltaPot*trig]';
-
-
 trig = 1:900; %-0.2:0.2/900:-0.00002;
-U = [1*ones(1,100) trig*4/900-4]';
+
+U = [50*ones(1,100) -DeltaPot*trig]';
+
+
+%trig = 1:900; %-0.2:0.2/900:-0.00002;
+%U = [1*ones(1,100) trig*4/900]';
 % Two finite square wells of width 2w and distance 2a apart %
 w = L/50; 
 a=3*w;
@@ -57,7 +56,7 @@ a=3*w;
 e = ones(N,1); 
 Lap = spdiags([e -2*e e],[-1 0 1],N,N)/dx^2;
 % Total Hamiltonian
-hbar = 1; m = 0.2; % constants for Hamiltonian 
+hbar = 1; m = 0.24; % constants for Hamiltonian 
 H = -1/2*(hbar^2/m)*Lap + spdiags(U,0,N,N);
 % Find lowest nmodes eigenvectors and eigenvalues of sparse matrix 
 nmodes = 10; options.disp = 0;
@@ -72,6 +71,6 @@ lgnd_str = [repmat('E = ',nmodes,1),num2str(E)];
 legend(lgnd_str) % place lengend string on plot
 shg
 
-plot(x,100*V(:,1:10)+E(1:10)',x,U)
+%plot(x,100*V(:,1:10)+E(1:10)',x,U)
 hold on 
 %surface(A)

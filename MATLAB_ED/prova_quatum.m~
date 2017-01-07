@@ -32,21 +32,20 @@
 % % E % display eigenvalue matrix
 % % diag(E) % display a vector containing the eigenvaluesdisplay a vector containing the eigenvalues
 
-
-L = 50;
-N = 1000;
+L = 500; %L=50 -> 2L = 5nm 
+N = 10000;
 x = linspace(-L,L,N)';
 dx = x(2) - x(1);
 
-Eltrig = -135741908.264347*;
+Eltrig = -2.256463756872821/51.42208619083232; %eV/51 = ATOMIC UNIT : HA/BOHR
 DeltaPot = Eltrig*dx;
-trig = 1:9000; %-0.2:0.2/900:-0.00002;
-
-U = [10*ones(1,1000) -DeltaPot*trig]';
-
-
 trig = 1:900; %-0.2:0.2/900:-0.00002;
-U = [1*ones(1,100) trig*4/900-4]';
+
+U = [5*ones(1,100) -DeltaPot*trig]';
+
+
+%trig = 1:900; %-0.2:0.2/900:-0.00002;
+%U = [1*ones(1,100) trig*4/900]';
 % Two finite square wells of width 2w and distance 2a apart %
 w = L/50; 
 a=3*w;
@@ -72,6 +71,6 @@ lgnd_str = [repmat('E = ',nmodes,1),num2str(E)];
 legend(lgnd_str) % place lengend string on plot
 shg
 
-plot(x,100*V(:,1:10)+E(1:10)',x,U)
+%plot(x,100*V(:,1:10)+E(1:10)',x,U)
 hold on 
 %surface(A)

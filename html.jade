@@ -88,27 +88,31 @@ html
        section
         h2 Introduction to  heterostructures
         p
-         | Optoelectronics, RF electronics and high-power and high-frequency electronics demand semiconductor alloys. These applications need materials pcharacterstics to be thoroughly tailored and such requirement is fulfilled through the engineering of optical, transport and electrical properties. 
-         |The most common alloys are based on different semiconductive compounds (e.g. GaN, GaAs and InP) and they can be ternary or quaternary such as Al_xGa_{1-x}As and In_xGa_{1-x}As_yP_{1-y}.
-         | An heterostructure is a physical system made of materials with different bandgap but with resembling structural properties i.e. crystal lattice and lattice parameter.
-         |Heteroepitaxy is the method underlying the modern growth technologies to build these systems. The most exploited techniques are MOCVD and MBE and they may harness buffer layers (i.e. alloys with gradually changing composition) to smooth the transition from one material to another to reduce strain and avoid defects.
-         | III-nitrides have gained remarkable importance since they overcame the limitations of  GaAs based electronic devices for high-temperature applications and enabled to design and to fabricate optoelectronic devices in the blue and violet spectrum range. Moreover, devices working at short wavelength are required in a broad technology range, e.g. laser printers, under water communications and high density information storage. The III-nitrides bandgaps are large and direct. In details, they vary from  0.7eV (InN), 3.4 eV (GaN) and 6.2 eV (AlN)  for wurtzite semiconductors. 
-         | Because of the wide energy gap and significant bond strength they can be exploited to produce short wavelength LED and high-temperature transistors. [tesi]
-         |In particular, AlGaN/GaN based High Electron Mobility Transistors (HEMT) play a crucial role in next generation 3G/4G mobile phone stations, radar, mixers and oscillators. [lenka, chractersitics study]
-         | GaN-based materials provide high frequency operation (tens of GHz), high saturation velocity ($\sim 10^7 cm/s$), large breakdown electric field ($3 MV/cm$) and high power density of an AlGaN/GaN HEMT over 11W/mm. Most importantly, polarization fields allow a larger two dimensional electron gas (extensively discussed later on in the report) to be confined than in AlGaAs/GaAs HEMT. For all these reason GaN-based HEMTs have a key role in developing advanced electronic devices.  Despite all these highly promising features, there is still challenging work to carry out in order to gain a deep comprehension and control of band structure and quantum confinement in III-nitrides based transistors. In fact, polarization charges at the heterointerface and electronic properties are to be understood to achieve optical and electronic application in novel devices.
+         |High-power and high-frequency applications, as well as optoelectronics, RF electronics, demand materials the which characteristics can be thoroughly tailored. Since alloys can widely change their optical, transport and electrical properties upon their concentration, are the most used material for those applications.  
+         |In general alloys are based on different semiconductive compounds (e.g. GaN, GaAs and InP). Depending on the number of elements they are made of they can be ternary or quaternary such as $Al_xGa_{1-x}As$ and $In_xGa_{1-x}As_yP_{1-y}$.
+         |<br> An heterostructure is a physical system made of materials with different bandgap but with resembling structural properties i.e. crystal lattice and lattice parameter.
+         |Heteroepitaxy is the method underlying the modern growth technologies to build these systems, usually by MOCVD or MBE. They may harness buffer layers (i.e. alloys with gradually changing composition) to smooth the transition from one material to another to reduce strain and avoid defects.<br>
+         |The III-nitrides bandgaps are large and direct, in detail, considering Wurtzite structure, they can vary from  0.7eV (InN), 3.4 eV (GaN) up to 6.2 eV (AlN). 
+         | Because of the wide energy gap and significant bond strength III-nitrides have gained remarkable importance, mainly because they overcame the limitations of GaAs based electronic devices, enabling the design and fabrication of optoelectronic devices at short wavelength such as LED, laser printers, under water communications, high density information storage and high-temperature transistors. 
+         cit#tesi
+         |<br>In particular, AlGaN/GaN based High Electron Mobility Transistors (HEMT) play a crucial role in next generation 3G/4G mobile phone stations, radar, mixers and oscillators. 
+         cit#lenka
+         |<br>GaN-based materials provide high frequency operation (tens of GHz), high saturation velocity ($\sim 10^7 cm/s$), large breakdown electric field ($3 MV/cm$) and high power density of an AlGaN/GaN HEMT over $11W/mm$. Even more important are polarization fields which allow the formation of larger two dimensional electron gas (see chapter ##) compared to AlGaAs/GaAs based HEMT. 
+         |<br>For all these reasons GaN-based HEMTs have a key role in the developing of advanced electronic devices. However, despite all the highly promising features, there is still lot of challenging work to carry out in order to gain a deep understanding of their behavior. In fact, in order to fabricate novel devices based on III-nitrides, good description of band structure, quantum confinement polarization charges and the electron mobility have to be obtained. 
+         
        section
         h2 Heterojunction equilibrium 
         p
-        | Heterojunction is formed whenever two materials with different bandgaps are brought to contact. To realize thermodynamic equilibrium the fermi level has to be constant thoughout the whole system so there is charge flow until the mentioned condition is achieved. Electrons diffuse from higher Fermi energy material to the lower Fermi energy one and holes diffuse toward opposite direction. Carriers flow leads to not neutral region close to the heterointerface hence generating an electric field that causes the bands to bend. This built-in electrostatic field generates a drift current that counterbalance the diffusion and these counteracting effects make the system evolve to equilibrium.
-        | The below image is devoted to illustrate the band diagram evolution. The following physical description refers to this image.
+        | Heterojunction is formed whenever two materials with different bandgaps are brought to contact. Electrons start to diffuse from higher Fermi energy material to the lower one while holes diffuse toward the opposite direction. The carriers flow leads to an accumulation of electrons and hole at the interface which generates an electric field, which generates a drift force on the carries counterbalancing the diffusion process. The two effects, diffusion and drift, are balanced at the thermodynamic equilibrium that is obtained when Fermi Level results constant over the whole system. 
+        |<br>The presence of the electric field at the interface generates the so-called built-in potential, which causes the  bands structure to bend.
+        | Below, the image shows the band diagram structure and its evolution at the interface. 
         //include img/bandDiagr
-        //| The built-in potential is determined by the driving force of this mechanism i.e. the Fermi levels difference:
-        //.equation.svg#Vbi
-        //| qV_{bi} = E_{f,2} - E_{f,1}
-        | All quantities can be expressed through bulk semiconductor model formulas and the interface can be treated with the formalism develeped for homojunctions.
-        | The Anderson's rule, also known as affinity rule, states that the band bending is dictated by electron affinities and this implies that the conduction and valence band discontinuities are respectively given by:
+        | The conduction and valence band discontinuities are determinate by the electron affinities $\chi_i$ of the two semiconductors using the Anderson's rule, also known as affinity rule, which reads:
         .equation.svg#affinityrule
          | \Delta E_c = \text{q}(\chi_2 - \chi_1)\quad \text{and}\quad \Delta E_v = \Delta E_g - \text{q}(\chi_2 - \chi_1)
+        |Therefor, the built in potential at a heterojuction made of two intrinsic semiconductors becomes: 
+        .equation.svg
+         | V_{\text{bi}} = \Delta \chi + \frac{\Delta E_g}{2q}
         | Let us consider a n-doped (material 2) and a p-doped (material 1) semiconductors forming an heterojunction as example. This may be the case for AlGaN/GaN interface with Si donors in AlGaN and Mg acceptors in GaN.
         | At equilibrium bands are bent and the interface discontinuity is conserved whereas the vacuum energy level is continous throught the whole system and it is not constant. The relative band alignment is achieved by the creation of built-in electric field whose related electrostatic potential is:
         .equation.svg#Vbi
@@ -119,10 +123,10 @@ html
         | $N_a$ and $N_d$ indicate  the dopant concentration of the two materials while $N_{c,2}$ and $N_{v,1}$ indicate the effective density of states in the conduction and the valence band of the specified semiconductors.
         | It is to be stressed the fact that heterostructures are non homogenous media thus the key physical quantity to be examined at the interface is the electrical displacement field $\vec D$. Gauss's law is rewritten in its most general form:
         .equation.svg#electricdisplacement
-         | {\rm div}\, \vec D = \rho \quad with \, \, \vec D = \epsilon \vec \varepsilon + \vec P
+         | \vec {\triangledown} \cdot  {\bf D} = \rho \quad \text{with} \quad \, {\bf D} = \epsilon_0 \vec{\bf \varepsilon }+ {\bf P}
         | It is worthwile noticing that unlike homojunction junction law applied to heterojunctions yields that minority carrier injection is enhanced toward smaller bandgap material. It is due to the ratio of minority carrier concentration at each boundary of deleption regions which depends on doping level but also on energy bandgap and the dependence from the latter is exponential.
-        | Band discontinuity may be so high at the interface that a potential well may form and create carrier and/or optical confinement. The quantum well originates from $E_c$ bending enough to become lower than the Fermi level for a close range near the junction in the smaller bandgap material. Electrons are trapped at the interface on the p-side (typical confinement length $1 \div 10 nm)$. Carrier trapping is 1D therefore on the interface parallel surface electrons can be considered freely travelling since dopants acting as scattering center are reduced very close to the interface. Consequently quantization effects affect band structure and density of states (DOS or g).
-        section
+        | Band discontinuity may be so high at the interface that a potential well may form and create carrier and/or optical confinement. The quantum well originates from $E_c$ bending enough to become lower than the Fermi level for a close range near the junction in the smaller bandgap material. Electrons are trapped at the interface on the p-side (typical confinement length $1 \div 10 nm)$. Carrier trapping is 1D therefore on the interface parallel surface electrons can be considered freely traveling since dopant acting as scattering center are reduced very close to the interface. Consequently quantization effects affect band structure and density of states (DOS or g).
+       section
         h2 Two dimensional electron gas (2DEG)
         p
         | It is the sheet carrier charge concentration ($n_s$) forced by the built-in electric field to the heterointerface. Subbands are created due to quantum confinement.       
@@ -138,10 +142,10 @@ html
          | n_s = \int_{E_c}^{+\infty} g_{2D}(E)f_{FD}(E) \, dE = \frac{4 \pi m^* K_B T}{h^2}\sum_j ln \left[ 1+\frac{E_f - E_j}{K_B T}\right]
         
         
-        section
+       section
         h2 Quantum triangular well
         p
-        |  The triangular quantum well is the most suitable model to describe the 2DEG according to semiclassical approximation. To analyze let us consider a 1-dimensional problem with an uniform and constant electrical field along x-direction $\vec \varepsilon  = \varepsilon \hat{x}$ . The electrostatic potential to be added in the time-indipendent single-particle Schroedinger equation in order to implement the interaction of an electron with this electric field is $\phi (x) = q \varepsilon x $. It follows that the Schroedinger equation to be solved is:
+        |  The triangular quantum well is the most suitable model to describe the 2DEG according to semi classical approximation. To analyze let us consider a 1-dimensional problem with an uniform and constant electrical field along x-direction $\vec \varepsilon  = \varepsilon \hat{x}$ . The electrostatic potential to be added in the time-independent single-particle Schroedinger equation in order to implement the interaction of an electron with this electric field is $\phi (x) = q \varepsilon x $. It follows that the Schroedinger equation to be solved is:
         //.equation.svg#eqSCHROD
         //equazione
         |Defining the 'characteristic' length and energy 
@@ -160,13 +164,13 @@ html
         | Eigenvalues are calculated by applying the boundary condition according to which the wavefunction is null at $x=0$. Stationary states energies are determined by the zeros of the Airy functions and are directly proportional to the characteristic energy $E_0$ thus depend on the effective mass of the electron and the electric field. Below, the expression for the general eigenvalue $E_j$ is given.
         .equation.svg#TriangEigenV
          | E_j = c_j E_0 = c_j \left( \frac{(q \varepsilon \hbar)^2 }{2 m^*}\right)^{1/3}
-        where $c_j$ is the $j^{th}$ zero of the Airy function.
+        |where $c_j$ is the $j^{th}$ zero of the Airy function.
         |For the purpose of this report it should be highlighted that in case of a 2DEG at the heterointerface of a wide bandgap semiconductor and a narrow bandgap one the built-it electric field causes the quantum confinement. In details, it is strictly related to the electron surface density. Such concentration is specifically the sheet carrier charge density characterizing the 2DEG in the triangular well. Using a capacitor-like model, the built-in electric field is found to be linearly proportional to $n_s$. Hence it is valid to rewrite:
         .equation.svg#Subbands-NS23
          | E_j = \gamma_j (n_s)^{2/3}
         
-        | This step is reasonable, in fact even though the relationship of $E_j$ with $n_s$ is physically acceptable, the triangular well is a simplicistic approximation therefore the proportionality constants are experimentally determined.
-        section
+        | This step is reasonable, in fact even though the relationship of $E_j$ with $n_s$ is physically acceptable, the triangular well is a simplistic approximation therefore the proportionality constants are experimentally determined.
+       section
         h2 Wurtzite heterojunctions
         p
         |  words
@@ -174,7 +178,8 @@ html
         h2 High Electron Mobility Transistors (HEMTs)
         p
          |high-speed and high-power applications.  These devices offer advantages such as high breakdown voltage, high charge density, and good electron mobility [t7.3]–[t7.5]
-         |Such gas has revealed superior transport properties in particulat its high electrical mobility can reach $\sim 10^3 cm{2}/(V s)$ at room temperature ,cita -Analysis of thin AlN carrier exclusion layers in AlGaN/GaN microwave heterojunction field-effect transistors- R S Balmer et al.,Semicond. Sci. Technol. 19 (2004) L65–L67.
+         |Such gas has revealed superior transport properties in particular its high electrical mobility can reach $\sim 10^3 cm^{2}/(V s)$ at room temperature
+         cit#alncarriers
         
         
       //______________________    
@@ -341,12 +346,19 @@ html
         
       section
         h1 References
+        .reference(ref="tesi")
+          |AlGaN/GaN MBE 2DEG Heterostructures: Interplay between Surface, Interface and Device Properties. Martin Kocan, 2003.
+        .reference(ref="lenka")
+          |Characteristics Study of 2DEG Transport Properties of AlGaN/GaN and AlGaAs/GaAs-based HEMT, Lenka and Panda, 2010.
         .reference(ref="firstmodel")
           | AIGaAs-GaAs Two-Dimensional Electron Gas FET. IEEE TRANSACTIONS ON ELECTRON DEVICES, VOL. ED-29,NO.6,JUNE 1982
         .reference(ref="secondmodel")  
           | Analytical Expression for Fermi Level Versus Shekt Carriers Concentration for HEMT Modeling, S. KOLA et al, IEEE ELECTRON DEVICE LETTERS, VOL. 9, NO. 3, MARCH 1988
         .reference(ref="main")
           | A Physics-Based Analytical Model for 2DEG Charge Density in AlGaN/GaN HEMT Devices, S. Khandelwal, N. Goyal and T. Fjeldly, Fellow, IEEE TRANSACTIONS ON ELECTRON DEVICES, VOL. 58, NO. 10, OCTOBER 2011.
+        .reference(ref="alncarriers")
+          |Analysis of thin AlN carrier exclusion layers in AlGaN/GaN microwave heterojunction field-effect transistors- R S Balmer et al.,Semicond. Sci. Technol. 19 (2004) L65–L67.
+        
       
       include template/endscript
 
