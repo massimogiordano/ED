@@ -37,14 +37,11 @@ L = 50;
 N = 1000;
 x = linspace(-L,L,N)';
 dx = x(2) - x(1);
-
-Eltrig = -0.01357419082643;
-DeltaPot = Eltrig*dx;
-trig = 1:9000; %-0.2:0.2/900:-0.00002;
-
-U = [10*ones(1,1000) -DeltaPot*trig]';
-
-
+% POTENTIAL, choose one or make your own
+U = 1/2*10*x.^(2); % quadratic harmonic oscillator potential %
+%U = 1/2*10*x.^(4); % quartic potential
+% Finite square well of width 2w and depth given %
+w = L/50;
 trig = 1:900; %-0.2:0.2/900:-0.00002;
 U = [1*ones(1,100) trig*4/900-4]';
 % Two finite square wells of width 2w and distance 2a apart %

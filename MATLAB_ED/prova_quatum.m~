@@ -37,13 +37,16 @@ L = 50;
 N = 1000;
 x = linspace(-L,L,N)';
 dx = x(2) - x(1);
-% POTENTIAL, choose one or make your own
-U = 1/2*10*x.^(2); % quadratic harmonic oscillator potential %
-%U = 1/2*10*x.^(4); % quartic potential
-% Finite square well of width 2w and depth given %
-w = L/50;
+
+Eltrig = -135741908.264347*;
+DeltaPot = Eltrig*dx;
+trig = 1:9000; %-0.2:0.2/900:-0.00002;
+
+U = [10*ones(1,1000) -DeltaPot*trig]';
+
+
 trig = 1:900; %-0.2:0.2/900:-0.00002;
-U = [1*ones(1,100) trig*0.1/900-0.15]';
+U = [1*ones(1,100) trig*4/900-4]';
 % Two finite square wells of width 2w and distance 2a apart %
 w = L/50; 
 a=3*w;
@@ -54,7 +57,7 @@ a=3*w;
 e = ones(N,1); 
 Lap = spdiags([e -2*e e],[-1 0 1],N,N)/dx^2;
 % Total Hamiltonian
-hbar = 1; m = 1; % constants for Hamiltonian 
+hbar = 1; m = 0.2; % constants for Hamiltonian 
 H = -1/2*(hbar^2/m)*Lap + spdiags(U,0,N,N);
 % Find lowest nmodes eigenvectors and eigenvalues of sparse matrix 
 nmodes = 10; options.disp = 0;
