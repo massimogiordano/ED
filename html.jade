@@ -41,7 +41,9 @@ html
       .abstract.counter-skip
         h1 Abstract
         p
-          | Something
+         
+         // | The report aim is to simulate by means of MATLAB the theoretical work done on AlGaN/GaN HEMT devices by Sourabh Khandelwal, Nitin Goyal, and Tor A. Fjeldly in their published article $\textit{A Physics-Based Analytical Model for 2DEG Charge Density in AlGaN/GaN HEMT Devices}$, IEEE TRANSACTIONS ON ELECTRON DEVICES, VOL. 58, NO. 10, OCTOBER 2011. As the scientific paper is presented along with its most important results all the critical steps are considered and analysed in order to clarify and justify the steps that have contributed to build up this approximated yet promising analytical model.
+          | To enable a solid comprehension of all the physics concepts that will be mentioned and studied we provide a concise introductory part about heterostructures, simple quantum-mechanical observations and high electron mobility transistors.
       .index      
         h1 Contents
         p
@@ -108,7 +110,7 @@ html
         | Below, the image shows the band diagram structure and its evolution at the interface. 
         //include img/bandDiagr
         | The conduction and valence band discontinuities are determinate by the electron affinities $\chi_i$ of the two semiconductors using the Anderson's rule, also known as affinity rule, which reads:
-        .equation.svg#affinityrule
+        .equation.svg#affinityrule 
          | \Delta E_c = \text{q}(\chi_2 - \chi_1)\quad \text{and}\quad \Delta E_v = \Delta E_g - \text{q}(\chi_2 - \chi_1)
         |Therefor, the built in potential at a heterojuction made of two intrinsic semiconductors becomes: 
         .equation.svg
@@ -132,7 +134,7 @@ html
         | It is the sheet carrier charge concentration ($n_s$) forced by the built-in electric field to the heterointerface. Subbands are created due to quantum confinement.       
         | Schroedinger's equation and Poisson equation are to be solved self-consistently if the real physical solution is sought. Furthermore, the total potential $V_{tot}$ should account for the electrostatic electron-electron repulsion, exchange-correlation effect and barrier potential. The interface charge concentration $n_s$ influences $V_{tot}$ and at the same time $n_s$ is by the sum of each subband contribution weighted by the probability to find electrons in that state, i.e. the square modulus of the wavefunction. Therefore what it follows, it is a simple, semiclassical yet efficient explanation of the physics underlying this system.
         | Stationary energy levels are determined by the almost free motion parallel (yz plane) to the junction plus the confinement normal (x direction) to it.
-        .equation.svg#electricdisplacement
+        .equation.svg#e_values
          | E_{j,\vec k_{//}} = E_j + \frac{\hbar^2 k_{//}}{2m*}
         | Let us consider the 2DEG within a large potential well in yz plane with infinite barriers such that wavefunctions are null at boundaries. The density of states taking into account all subbands contributions is:
         .equation.svg#g2D
@@ -169,17 +171,35 @@ html
         .equation.svg#Subbands-NS23
          | E_j = \gamma_j (n_s)^{2/3}
         
+
         | This step is reasonable, in fact even though the relationship of $E_j$ with $n_s$ is physically acceptable, the triangular well is a simplistic approximation therefore the proportionality constants are experimentally determined.
        section
-        h2 Wurtzite heterojunctions
+        h2 Wurtzite semiconductors in heterostructures
+
         p
-        |  words
+        |  Polarization induced sheet charge density is here discussed. The focus will be on III-N semiconductors having wurtzite crystal lattice. This 3D atomic arrangement is noncentrosymmetric hence it originates a pyroelectric compound system, i.e. with spontaneous polairzation. Such material is consequently piezoelectric. Therefore the total polarization is given by these two properties in wurtzite lattices.
+        | At heterointerfaces the polarization gradient leads to bound interface charges according to the general Gauss's law eq
+        eq#electricdisplacement
+        | AlN, InN and GaN have high spontaneous polarizations (up to $0.09C/m^{-2}$ as in AlN) meanwhile the spontaneous polarization change rate with temperature is small (e.g 7.5 \mu C / (Km^{-2}) for AlN) at room temperature. This is extremely useful for high power and high temperature applications, e.g. microwave amplifier, lasers and surface acoustic wave devices (SAWs). As to what regards the piezoelectric constants it has been reported that they are greater by a factor ranging from 5 to 20 than those of III-arsenides semiconductors (J. Appl. Phys. 86, 1 (1999); doi: 10.1063/1.371145). Spontanoues and piezoelectric polarization gradients cause strong electric field at heterojunctions (Applied Physics Letters 74, 2361 (1999); doi: 10.1063/1.123851) and this has significant impact on charge distribution and lifetime of carrier within the 2DEG.
+        | Polarization plays a fundamental role in pseudomorphic wurtzite AlGaN/GaN based transistors according to scientific literature ($\textit{Undoped AlGaN/GaN HEMTs for Microwave Power Amplification}$, Lester F. Eastman, et al.,IEEE TRANSACTIONS ON ELECTRON DEVICES, VOL. 48, NO. 3, MARCH 2001).
+        | The most common growth direction on GaN substrate is normal to the basal plane {0001} where atoms are arranged in bilayers. These bilayers consist of closely spaced hexagonal sheets, one formed by cations and the other by anions thus leading to polar faces. Therefore  in GaN-based heterostructure the basal face is either Ga or N and this leads repsectively to $0001$ or $000 \bar 1 $ polarity. The key point is to notice that different polarity determines different physical and chemical characteristics. Ga-faced GaN means that Ga atoms occupy top positions of the {0001} bilayer (in case of N-faced it is analogous). 
+        | Surface defects and surface contamination can screen bound surface charge due to polarization discotinuity across an interface. Such sheet charge accumulation can lead to two dimensional electron gas formation because it can occur that a surface electron density builds up in order to compensate the excess of positive polarization induced charge.
+        | It should be clear at this point that 2DEG in AlGaN/GaN devices is influenced by internal as well as external properties. This opens new ways to modulate carrier concentration of the 2DEG with respect to GaAs-based devices. Sensors exploiting polarization induced 2DEG can be built and these can rely on three main working principle: surface charge manipulation (interaction with ions and molecules), mechanical stress application (pressure) and direct carriers manipulation (external electric field).
        section
         h2 High Electron Mobility Transistors (HEMTs)
         p
-         |high-speed and high-power applications.  These devices offer advantages such as high breakdown voltage, high charge density, and good electron mobility [t7.3]–[t7.5]
-         |Such gas has revealed superior transport properties in particular its high electrical mobility can reach $\sim 10^3 cm^{2}/(V s)$ at room temperature
+
+         //|high-speed and high-power applications.  These devices offer advantages such as high breakdown voltage, high charge density, and good electron mobility [t7.3]–[t7.5]
+         //|Such gas has revealed superior transport properties in particular its high electrical mobility can reach $\sim 10^3 cm^{2}/(V s)$ at room temperature
          cit#alncarriers
+
+         | This chapter will firstly briefly introduce HEMTs and it will secondly discuss  a simple physics-based electrical model for HEMTs.
+         | 2DEG leads to outstanding transport properties in particular its high electrical mobility can reach $\sim 10^3 cm{2}/(V s)$ at room temperature ($\textit{Analysis of thin AlN carrier exclusion layers in AlGaN/GaN microwave heterojunction field-effect transistors}$, R S Balmer et al.,Semicond. Sci. Technol. 19 (2004) L65–L67). In addition, GaN has excellent electrical and thermal characteristics, to be more specific it is also electrically stable and it is a superior heat conductor. GaN-based devices offer advantages such as high breakdown field (critical breakdown field $\sim 3 \div 5 MV/cm$), high charge density and  very high electron mobility [t7.3]–[t7.5]. 
+         | In HEMT the channel carrier density $n_s$ is given by eq
+         eq#ns2D
+         | according to the simplified model. Since $n_s$ and the confinement electric field are related the gate voltage can be used to vary the interface electric field hence controlling the number of carrier in the 2DEG.
+         
+
         
         
       //______________________    
