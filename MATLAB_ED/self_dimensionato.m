@@ -20,7 +20,7 @@ U = [50*ones(1,500) -DeltaPot*trig]';
 e = ones(N,1); 
 Lap = spdiags([e -2*e e],[-1 0 1],N,N)/dx^2;
 
-for i=1:1
+for i=1:2
     %% 
 % Total Hamiltonian
 % constants for Hamiltonian 
@@ -69,9 +69,9 @@ Tot = -q*(Nd-n)./dielcost;
 %solver
 [X, R] = linsolve(zeros(N,N)+Poisson, Tot);
 % 0.195 eV
-X = X; %max(abs(q*X))*10
-DeltaE =  -[1.95*ones(500,1)' 0*ones(500,1)']; %zeros(1000,1); 
-%U = -q*X-DeltaE';
+X = X/51/2; %max(abs(q*X))*10
+DeltaE =  -[60*ones(500,1)' 0*ones(500,1)']; %zeros(1000,1); 
+U = (-X-DeltaE');
 
 end
 plot(U)
