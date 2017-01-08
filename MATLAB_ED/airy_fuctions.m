@@ -1,4 +1,4 @@
-function [El0, El1, Emax, Airy_energies] = airy_fuctions(Efermi, E0, E1, V0, f)
+function [El0, El1, Emax, Airy_energies, P_occupation] = airy_fuctions(Efermi, E0, E1, V0, f)
 
 global d T m q hbar 
 
@@ -31,8 +31,6 @@ for i=1:length(c)
     Airy_energies(i) = Energy_trig_well(El0, c(i))
     P_occupation(i) = fermi(Airy_energies(i), Efermi(V0), T);
 end 
-
-
 
 
 Emax= El0*d;

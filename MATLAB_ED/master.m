@@ -40,7 +40,7 @@ V0 = find(Volts >= 0);
 V0 = V0(1); %index for Vgate = 0
 
 %bound states into trig_well AIRY functions        
-[El0, El1, Emax, Airy_energies] = airy_fuctions(Efermi, E0, E1, V0, f);
+[El0, El1, Emax, Airy_energies, P_occupation] = airy_fuctions(Efermi, E0, E1, V0, f);
         
 %approximations
 
