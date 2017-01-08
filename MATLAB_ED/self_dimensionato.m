@@ -76,3 +76,4 @@ U = (-X-DeltaE');
 end
 plot(U)
 plot(x,50*V(:,1:1)+E(1:1)',x,U)
+web('html/fourier_demo2.html')

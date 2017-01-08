@@ -159,7 +159,7 @@ html
         |  The triangular quantum well is the most suitable model to describe the 2DEG according to semi classical approximation. To analyze let us consider a 1-dimensional problem with an uniform and constant electrical field along x-direction $\vec \varepsilon  = \varepsilon \hat{x}$ . The electrostatic potential to be added in the time-independent single-particle Schroedinger equation in order to implement the interaction of an electron with this electric field is $\phi (x) = q \varepsilon x $. 
         |<br>It follows that the Schroedinger equation to be solved is:
         .equation.svg#eqSCHROD
-         |\left[-\frac {\hbar^{2}}{2\mu }\nabla^{2}+V(\mathbf r )\right]\Psi (\mathbf r)= E\Psi (\mathbf r )
+         |\left[-\frac {\hbar^{2}}{2m^2 }\nabla^{2}+V(\mathbf r )\right]\Psi (\mathbf r)= E\Psi (\mathbf r )
         |If we define the follow variables as: 
         .equation.svg
          |x_0 = \left( \frac{\hbar^2}{2 m^* q \varepsilon }\right)^{1/3} \  \ , \ \ \ E_0 =\left(   \frac{ (q \varepsilon \hbar)^2 }{2 m^*} \right)^{1/3}  \ \ \text{and} \ \ s = \frac{x}{x_0} - \frac{E}{E_0} 
@@ -175,16 +175,18 @@ html
         .equation.svg#TriangEigenV
          | E_j = c_j E_0 = c_j \left( \frac{(q \varepsilon \hbar)^2 }{2 m^*}\right)^{1/3}
         |where $c_j$ is the $j^{th}$ zero of the Airy function.
-        |Usually, eq
-        eq#TriangEigenV
-        |is used to determine coefficients for $j>3$, while for small $j$ numerical approximation are used. 
+        //|Usually, eq
+        //eq#TriangEigenV
+        //|is used to determine coefficients for $j>3$, while for small $j$ numerical approximation are used. 
         |<br>For the purpose of this report we highlight that when the heterointerface is made by semiconductors with very different band gaps, the built-in electric field is so hight, order of $\sim MV/m$, that cause quantum confinement and form electron surface density. In specific, this concentration is called sheet carrier charge density or 2DEG. 
-        |<br>Using a capacitor-like model, the built-in electric field is found to be linearly proportional to $n_s$. Hence it is valid to rewrite:
+        |<br>###Using a capacitor-like model, the built-in electric field is found to be linearly proportional to $n_s$. Hence it is valid to rewrite:
         .equation.svg#Subbands-NS23
          | E_j = \gamma_j (n_s)^{2/3}
         
         cit#formation2DEG
-        | This step is reasonable, in fact even though the relationship of $E_j$ with $n_s$ is physically acceptable, the triangular well is a simplistic approximation therefore the proportionality constants are experimentally determined.
+        | This step is reasonable, in fact even though the relationship of $E_j$ with $n_s$ is physically acceptable, the triangular well is a simplistic approximation therefore the proportionality constants are experimentally determined.<br>
+        include airy_fuctions.html
+        
        section
         h2 Wurtzite semiconductors in heterostructures
 
