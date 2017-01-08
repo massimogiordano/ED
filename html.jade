@@ -90,37 +90,37 @@ html
        section
         h2 Introduction to  heterostructures
         p
-        |High-power and high-frequency applications, as well as optoelectronics, RF electronics, demand materials the which characteristics can be thoroughly tailored. Since alloys can widely change their optical, transport and electrical properties upon their concentration, are the most used material for those applications.  
-        |In general alloys are based on different semiconductive compounds (e.g. GaN, GaAs and InP). Depending on the number of elements they are made of they can be ternary or quaternary such as $Al_xGa_{1-x}As$ and $In_xGa_{1-x}As_yP_{1-y}$.
+        |High-power and high-frequency applications, as well as optoelectronics, RF electronics, demand materials whose characteristics can be thoroughly tailored. Since alloys can widely change their optical, transport and electrical properties upon their concentration, they are the most used material for those applications  |In general alloys are based on different semiconductive compounds (e.g. GaN, GaAs and InP). Depending on the number of elements they are made of they can be ternary or quaternary such as $Al_xGa_{1-x}As$ and $In_xGa_{1-x}As_yP_{1-y}$.
         |<br> An heterostructure is a physical system made of materials with different bandgap but with resembling structural properties i.e. crystal lattice and lattice parameter.
-        |Heteroepitaxy is the method underlying the modern growth technologies to build these systems, usually by MOCVD or MBE. They may harness buffer layers (i.e. alloys with gradually changing composition) to smooth the transition from one material to another to reduce strain and avoid defects.<br>
+        |Heteroepitaxy is the method underlying the modern growth technologies to create these systems, usually by MOCVD or MBE. They may harness buffer layers (i.e. alloys with gradually changing composition) to smooth the transition from one material to another to reduce strain and avoid defects.<br>
         |The III-nitrides bandgaps are large and direct, in detail, considering Wurtzite structure, they can vary from  0.7eV (InN), 3.4 eV (GaN) up to 6.2 eV (AlN). 
-        | Because of the wide energy gap and significant bond strength III-nitrides have gained remarkable importance, mainly because they overcame the limitations of GaAs based electronic devices, enabling the design and fabrication of optoelectronic devices at short wavelength such as LED, laser printers, under water communications, high density information storage and high-temperature transistors. 
+        | Because of the wide energy gap and significant bond strength III-nitrides have gained remarkable importance, mainly because they overcome the limitations of GaAs based electronic devices, enabling the design and fabrication of optoelectronic devices at short wavelength such as LED, laser printers, under water communications, high density information storage and high-temperature transistors. 
         cit#tesi
         |<br>In particular, AlGaN/GaN based High Electron Mobility Transistors (HEMT) play a crucial role in next generation 3G/4G mobile phone stations, radar, mixers and oscillators. 
         cit#lenka
-        |<br>GaN-based materials provide high frequency operation (tens of GHz), high saturation velocity ($\sim 10^7 cm/s$), large breakdown electric field ($3 MV/cm$) and high power density of an AlGaN/GaN HEMT over $11W/mm$. Even more important are polarization fields which allow the formation of larger two dimensional electron gas (see chapter ##) compared to AlGaAs/GaAs based HEMT. 
-        |<br>For all these reasons GaN-based HEMTs have a key role in the developing of advanced electronic devices. However, despite all the highly promising features, there is still lot of challenging work to carry out in order to gain a deep understanding of their behavior. In fact, in order to fabricate novel devices based on III-nitrides, good description of band structure, quantum confinement polarization charges and the electron mobility have to be obtained. 
+        |<br>GaN-based materials provide high frequency operation (tens of GHz), high saturation velocity ($\sim 10^7 cm/s$), large breakdown electric field ($3 MV/cm$) and high power density of an AlGaN/GaN HEMT over $11W/mm$. Polarization fields are of remarkable importance as they allow the formation of larger two dimensional electron gas (see chapter ##) compared to those in AlGaAs/GaAs based HEMT. 
+        |<br>For all these reasons GaN-based HEMTs have a key role in the development of advanced electronic devices. 
+        |<br>However, despite all the highly promising features, there is still lot of challenging work to carry out in order to gain a deep understanding of their behavior. In fact, in order to fabricate novel devices based on III-nitrides, good description of band structure, quantum confinement polarization charges and the electron mobility has to be obtained. 
         
        section
         h2 Heterojunction equilibrium 
         p
-        | Heterojunction is formed whenever two materials with different bandgaps are brought to contact. Electrons start to diffuse from the higher Fermi energy material to the lower one while holes diffuse toward the opposite direction. The carriers flow leads to an accumulation of charges at the interface creating an electric field. The electric field generates a drift force on the carries counterbalancing the diffusion process. The two effects, diffusion and drift, are balanced at the thermodynamic equilibrium that is obtained when Fermi Level results constant over the whole system. 
-        |<br>The presence of the electric field at the interface generates the so called built-in potential, which causes the  bands structure to bend.
+        | Heterojunction is formed when two materials with different bandgaps are brought to contact. Electrons start to diffuse from the higher Fermi energy material to the lower one while holes diffuse along the opposite direction. The carriers flow leads to an accumulation of charges at the interface creating an electric field. The electric field generates a drift force on the carriers counterbalancing the diffusion process. The two effects, diffusion and drift, are balanced at the thermodynamic equilibrium that is obtained when Fermi Level results constant over the whole system. 
+        |<br>The presence of the electric field at the interface causes the bands structure to bend. The electric field and the potential characterizing the heterojunction at the equilibrium are said to be \textit{built-in}.
         //spostato
-        |<br>The solution, as discussed in chapter ##, can be found calculating self-consistently the interdependence between the Poisson equation, which takes into account the charge densities and the dielectric discontinuities, and the Schrodinger equation, which allows to calculate the number of electrons trapped in the built-in potential. 
+        |<br>The solution, as discussed in chapter ##, can be found calculating self-consistently the Poisson equation, which relates the total charge density to the potential, and the time-indipendent Schroedinger equation, whose solutions are the bound states wavefunctions.
         |<br> Below, the image shows the band diagram structure and its evolution at the interface. 
         //include img/bandDiagr
         | The conduction and valence band discontinuities are determinate by the electron affinities $\chi_i$ of the two semiconductors using the Anderson's rule, also known as affinity rule, which reads:
         .equation.svg#affinityrule 
          | \Delta E_c = \text{q}(\chi_2 - \chi_1)\quad \text{and}\quad \Delta E_v = \Delta E_g - \text{q}(\chi_2 - \chi_1)
-        |The vacuum energy level is continuous through all the junction but not constant because it is affected by the formation of the built-in potential. Consequentially, it results parallel to the bands. 
+        |The vacuum energy level is continuous through all the junction but not constant because it is affected by the formation of the built-in potential. It following the bending of the conduction band so to keep constant $\chi$ in each material. 
         |<br>Therefore, for an heterostructure made of two intrinsic semiconductors the built-in potential at thermal equilibrium  becomes: 
         .equation.svg#builtin
          | V_{\text{bi}} = \frac{E_{f,2} - E_{f,1}}{q} = \Delta \chi + \frac{\Delta E_g}{2q}
         |However if the junction is made of doped materials eq
         cit#builtin 
-        | is no longer valid. Considering a p-doped material 1 and a n-doped material 2 forming an heterojunction we have to express the Fermi energies as function of the dopants concentrations. Thus, the built-in potential can be written as:
+        | is no longer valid. Considering a p-doped material (1) and a n-doped material (2) forming an heterojunction we have to express the Fermi energies as function of the dopants concentrations. Thus, the built-in potential can be written as:
         .equation.svg#Vbi2
          | qV_{bi} = E_{g,1} - \Delta E_c + \text{ln}\left(\frac{N_1 N_2}{N_{c,2}N_{v,1}}\right)
         | where $N_1$ and $N_1$ indicate the dopant concentration while $N_{c,2}$ and $N_{v,1}$ indicate the effective density of states in the conduction and the valence band of the specified semiconductors.
@@ -129,26 +129,27 @@ html
         //.equation.svg#electricdisplacement
          | \vec {\triangledown} \cdot  {\bf D} = \rho \quad \text{with} \quad \, {\bf D} = \epsilon_0 \vec{\bf \varepsilon }+ {\bf P}
         //| It is worth to mention that unlike homojunction law applied to heterojunctions yields that minority carrier injection is enhanced toward smaller bandgap material. It is due to the ratio of minority carrier concentration at each boundary of deleption regions which depends on doping level but also on energy bandgap and the dependence from the latter is exponential.
-        |In the potential well a certain number of bound states are present, if their energies are lower than the Fermi Energies they will be populated by electrons, generating a two dimensional high-mobility carries sheet parallel to the interface.  
-        |Since carriers come from the doped regions but travel in the undoped one, they can be considered as traveling freely because scattering with dopant does not occur. 
-        |<br>In addition, due to dimensional constrains and the typical length of the well of $1 \div 10 nm$, quantization effects appears on the band structure and density of states (DOS or g).
+        | Bound states exist in the potential and they are occupied according to Fermi-Dirac statistics. Such confinement normal to the interface generates a 2D high-mobility carriers gas parallel to the junction.
+        |Since carriers come from the doped region but travel in the undoped one, they can be considered as traveling freely because scattering with dopant does not occur. 
+        |<br>In addition, due to dimensional constraints and the typical length of the well of $1 \div 10 nm$, quantization effects appears on the band structure and density of states (DOS or g).
         
        section
         h2 Two dimensional electron gas (2DEG)
         p
         | The 2DEG is the sheet carrier charge concentration ($n_s$) forced by the built-in electric field to the heterointerface. Subbands are created due to quantum confinement.       
-        | Schroedinger's equation and Poisson equation are to be solved self-consistently if the real physical solution is sought. Furthermore, the total potential $V_{tot}$ should account for the electrostatic electron-electron repulsion, exchange-correlation effect and barrier potential. The interface charge concentration $n_s$ influences $V_{tot}$ and at the same time $n_s$ is by the sum of each subband contribution weighted by the probability to find electrons in that state, i.e. the square modulus of the wavefunction. Therefore what it follows, it is a simple, semiclassical yet efficient explanation of the physics underlying this system.
-        | The energy of each particle is given by the energy of the sub-band plus the kinetic energy the electron has moving in the two dimensional plane parallel to the junction. Thus, the available energy levels are determined by:
+        | Schroedinger's equation and Poisson equation are to be solved self-consistently if the real physical solution is sought. Furthermore, the total potential $V_{tot}$ should account for the electrostatic electron-electron repulsion, exchange-correlation effect and barrier potential. The interface carriers concentration $n_s$ influences $V_{tot}$ and at the same time $n_s$ is determined by the sum of each subband contribution weighted by the probability to find electrons in that state, i.e. the square modulus of the wavefunction. 
+        |<br> For sake of simplicity, what it follows, it is a simple, semiclassical yet efficient explanation of the physics underlying this system.
+        | The energy of each particle is given by the energy of the sub-band plus the kinetic contribution from the 2D free motion parallel to the junction. Thus, the available energy levels are determined by:
         .equation.svg#e_values
          | E_{j,\vec k_{//}} = E_j + \frac{\hbar^2 k^2_{//}}{2m^*}
         //| Let us consider the 2DEG within a large potential well in yz plane with infinite barriers such that wavefunctions are null at boundaries. The density of states taking into account all subbands contributions is:
-        |Consequentially, the density of states of the 2DEG is a step function because as $E>E_j$ a higher sub-band can host more electrons. However, they can assume any value of energy because in each sub-band they can accelerate in the plane direction. The final formula for the 2DEG density of stats results:  
+        |Consequentially, the density of states of the 2DEG is a step function because as $E>E_j$ a higher sub-band can host more electrons. However, for each sub-band they can accelerate in the plane direction. The final formula for the 2DEG density of stats results:  
         .equation.svg#g2D
          | g_{2D}(E)=  \sum_{j=1}^{+\infty} \left[ \frac{4 \pi m^*}{\hbar ^2}\text{H}(E-E_j) \right]
-        |Where H is the Heaviside step function, which increase of 1  in correspondence of each $E_j$. The figure below shows the density of state for a typical two dimensional gas.  
+        |Where H is the Heaviside step function. The figure below shows the density of states for a typical two dimensional gas.  
         center
          img(src="img/density.png" style="  width: 500px;")
-        |<br>Considering the probability of occupation of each sub-band, the DOS is used to calculate the sheet carrier charge density of the 2DEG as follow.<br>
+        |<br>Considering the probability of occupation of each sub-band, the DOS is used to calculate the sheet carrier charge density of the 2DEG as follows.<br>
         .equation.svg#ns2D
          | n_s = \int_{E_c}^{+\infty} g_{2D}(E)f_{FD}(E) \, dE = \frac{4 \pi m^* K_B T}{h^2}\sum_j ln \left[ 1+\frac{E_f - E_j}{K_B T}\right]
         
@@ -179,9 +180,9 @@ html
          |c_{j}= \left(\frac{3 \pi}{2} (j-0.25)\right)^{2/3} \ \ \text{for} \ \ \ j>10
         |For small value of $j$, usually the first ten, eq
         eq#ccc
-        |is not valid, therefor tabulated values are used. 
-        |<br>For the purpose of this report we highlight that when the heterointerface is made by semiconductors with very different band gaps, the built-in electric field is so hight, order of $\sim MV/m$, that cause quantum confinement and form electron surface density. In specific, this concentration is called sheet carrier charge density or 2DEG. 
-        |<br>###Using a capacitor-like model, the built-in electric field is found to be linearly proportional to $n_s$. Hence it is valid to rewrite:
+        |is not valid, therefore tabulated values are used. 
+        |<br> For the purpose of this report we highlight that the built-in electric field quantum confinement and forms electron surface density. In specific, this concentration is called sheet carrier charge density or 2DEG. It will be shown that polarization fields play a main role in the formation of the 2DEG as well.
+        |<br>Using a capacitor-like model$\textbf{ELABORATE}$, the built-in electric field is found to be linearly proportional to $n_s$. Hence it is valid to rewrite: 
         .equation.svg#Subbands-NS23
          | E_j = \gamma_j (n_s)^{2/3}
         
@@ -210,23 +211,22 @@ html
          h2 High Electron Mobility Transistors (HEMTs)
          p
 
-         //|high-speed and high-power applications.  These devices offer advantages such as high breakdown voltage, high charge density, and good electron mobility [t7.3]–[t7.5]
-         //|Such gas has revealed superior transport properties in particular its high electrical mobility can reach $\sim 10^3 cm^{2}/(V s)$ at room temperature
-         //cit#alncarriers
-
          | This chapter will firstly briefly introduce HEMTs and it will secondly discuss  a simple physics-based electrical model for HEMTs.
-         | 2DEG leads to outstanding transport properties in particular its high electrical mobility can reach $\sim 10^3 cm^{2}/(V s)$ at room temperature
-         cit#some
-         |. In addition, GaN has excellent electrical and thermal characteristics, to be more specific it is also electrically stable and it is a superior heat conductor. GaN-based devices offer advantages such as high breakdown field (critical breakdown field $\sim 3 \div 5 MV/cm$), high charge density and  very high electron mobility [t7.3]–[t7.5]. 
-         | In HEMT the channel carrier density $n_s$ is given by eq
+         | 2DEG leads to outstanding transport properties in particular its high electrical mobility can reach $\sim 10^3 cm{2}/(V s)$ at room temperature 
+         cit#alncarriers
+         |. In addition, GaN has excellent electrical and thermal characteristics, to be more specific it is also electrically stable and it is a superior heat conductor. GaN-based devices offer advantages such as high breakdown field (critical breakdown field $\sim 3 \div 5 MV/cm$), high charge density and  very high electron mobility
+         cit#ttre
+         |,
+         cit#tcinque
+         |. In HEMT the channel carrier density $n_s$ is given by eq
          eq#ns2D
-         | according to the simplified model. Since $n_s$ and the confinement electric field are related, the gate voltage can be used to vary the interface electric field hence controlling the number of carrier in the 2DEG. The threshold voltage is the gate voltage  for which $n_s$ is zero, it is indicate with $V_{off}$ the threshold voltage for zero bias between source and drain. 
+         | according to the simplified model. Since $n_s$ and the confinement electric field are related, the gate voltage can be used to vary the interface electric field hence controlling the number of carrier in the 2DEG. The threshold voltage is the gate voltage  for which $n_s$ is zero. $V_{off}$ indicates the threshold voltage for zero bias between source and drain. 
          | The charge control law yields:
          .equation.svg#chargecontrollaw
           | n_s = \frac{\epsilon }{q d}(V_g - V_{off} - E_f)  
          | $E_f$ in measured with respect to the conduction band value at the interface on the smaller bandgap material side. The charge control law is worked out analysing the electrostatics in the wider bandgap material thus resolving in this region the Gauss's equation.
-         | Upon further increasing of $V_g$ the conduction band in the wide bandgap material may bend so much that for some $x=x_s$ it equals the fermi level: $ E_c (x_s) = E_f $. The voltage that realizes this condiction is called saturation gate voltage V_{g,SAT}. For $V_g > V_{g,SAT}$ a sheet of free carrier is formed in the barrier layer between the gate metallic contact and the 2DEG because $ E_f $ enters the conduction band. This charge accumulation contribute to an additional parisitic channel. In fact, raising $V_g$ leads to a growth of this parasitic charge with no further increase in $n_s$. Therefore, the sheet charge density of the 2DEG has a saturation point $n_{s,SAT}$ it is due to the shielding effect caused by the parasitic channel charge in the barrier layer. To increase $n_{s,SAT}$ dopants concentration ($N_{dop}$) and conduction band discontituity have to be raised. Neglecting constants and further parameters it is valid to state that $n_{s,SAT} \sim N_{dop}$ and $n_{s,SAT} \sim \Delta E_c ^{1/2}$ considering only dominant orders.
-         | Introducing heterostructures in FET design offers more degree of freedom: keeping constant V_{off} and exploiting $\Delta E_c$, the gate capacitance can be raised making thinner the barrier layer; the confined conducting channel improve the approximation to ideal device and provide outstanding perfomanrces and finally  the channel charge can be increased without affecting the mobility due to ionized dopants scattering since they are not present in the 2DEG. 
+         |<br> Upon further increase of $V_g$ the conduction band in the wide bandgap material may bend so much that for some $x=x_s$ it equals the Fermi level: $ E_c (x_s) = E_f $. The voltage that realizes this condition is called saturation gate voltage $V_{g,SAT}$. For $V_g > V_{g,SAT}$ a sheet of free carrier is formed in the barrier layer between the gate metallic contact and the 2DEG because $ E_f $ enters the conduction band. This charge accumulation contribute to an additional parisitic channel. In fact, raising $V_g$ leads to a growth of this parasitic charge with no further increase in $n_s$. Therefore, the sheet charge density of the 2DEG has a saturation point $n_{s,SAT}$ that is due to the so called shielding effect caused by the parasitic channel charge in the barrier layer. To increase $n_{s,SAT}$ dopants concentration ($N_{dop}$) and conduction band discontituity have to be raised. Neglecting constants and further parameters it is valid to state that $n_{s,SAT} \sim N_{dop}$ and $n_{s,SAT} \sim \Delta E_c ^{1/2}$ considering only dominant orders.
+         // NON LA METTEREI | Introducing heterostructures in FET design offers more degree of freedom: keeping constant V_{off} and exploiting $\Delta E_c$, the gate capacitance can be raised making thinner the barrier layer; the confined conducting channel improve the approximation to ideal device and provide outstanding perfomanrces and finally  the channel charge can be increased without affecting the mobility due to ionized dopants scattering since they are not present in the 2DEG. 
 
         
         
@@ -409,14 +409,21 @@ html
         .reference(ref="formation2DEG")
           |Formation of two-dimensional electron gas at AlGaN/GaN heterostructure and the derivation of its sheet density expression, Guang and Gang, 2014. 
           
-        .reference(ref="appl")
+        .reference(ref="wurtzite1")
           |GaN: Processing, defects, and devices. J. Appl. Phys. 86, 1 (1999); doi: 10.1063/1.371145
-        .reference(ref="851")
+        .reference(ref="wurtzite2")
           |Self-limitation of AlGaN/GaN quantum well energy by built-in polarization field, Grandjean, Applied Physics Letters 74, 2361 (1999); doi: 10.1063/1.123851
         .reference(ref="undoped")
           |Undoped AlGaN/GaN HEMTs for Microwave Power Amplification, Lester F. Eastman, et al.,IEEE TRANSACTIONS ON ELECTRON DEVICES, VOL. 48, NO. 3, MARCH 2001
         .reference(ref="some")
           |Analysis of thin AlN carrier exclusion layers in AlGaN/GaN microwave heterojunction field-effect transistors, R S Balmer et al.,Semicond. Sci. Technol. 19 (2004) L65–L67
+        .reference(ref="ttre")
+          |R. T. Kemberley, H. B. Wallace, and M. N. Yoder, “Impact of wide bandgap microwave devices on DoD systems,” Proc. IEEE, vol. 90, no. 6, pp. 1059–1064, Jun. 2002.
+        .reference(ref="tcinque")
+          |R. J. Trew, SiC and GaN transistors—Is there one winner for microwave power applications?” Proc. IEEE, vol. 90, no. 6, pp. 1032–1047, Jun. 2002
+          
+          
+          
       include template/endscript
 
 
